@@ -9,6 +9,7 @@
 //
 //##Workflow-steps have an icon indicating their status. The label changes color and size accordingly.
 $il-workflow-icon-size: 22px;
+$il-workflow-icon-border: 2px;
 $il-workflow-icon-font-color: white;
 $il-workflow-available-text-color: $il-text-color;
 $il-workflow-unavailable-text-color: color.scale($il-text-color, $lightness: 30%);
@@ -34,22 +35,22 @@ $il-workflow-unavailable-text-color: color.scale($il-text-color, $lightness: 30%
 	}
 }
 .il-workflow-container {
-	list-style: none;
 	padding: 0 $il-padding-small-horizontal;
+	list-style: none;
 	.il-workflow-step {
+		display: flex;
 		&:before {
 			background-color: $il-workflow-icon-font-color;
-			border: 2px solid $il-main-color;
+			border: $il-workflow-icon-border solid $il-main-color;
 			border-radius: 50%;
 			color: $il-workflow-icon-font-color;
 			content: "";
+			position: absolute;
 			font-family: Glyphicons Halflings;
 			font-size: math.floor($il-workflow-icon-size*0.52381);
 			height: $il-workflow-icon-size;
 			line-height: $il-workflow-icon-size;
 			margin-left: math.floor($il-workflow-icon-size*0.25);
-			padding-left: 0px;
-			position: absolute;
 			text-align: center;
 			width: $il-workflow-icon-size;
 		}
@@ -130,6 +131,7 @@ $il-workflow-unavailable-text-color: color.scale($il-text-color, $lightness: 30%
 			background-color: $il-main-color;
 		}
 		.text {
+			min-height: $il-workflow-icon-size * 1.5 + 2 * $il-workflow-icon-border;
 			.il-workflow-step-label,
 			.il-workflow-step-label .btn.btn-link {
 				color: $il-main-color;
@@ -140,10 +142,15 @@ $il-workflow-unavailable-text-color: color.scale($il-text-color, $lightness: 30%
 	}
 	//text
 	.text {
-		border-left: 1px dashed $il-neutral-color;
-		font-size: $il-workflow-icon-size*0.7;
+		display: flex;
+		box-sizing: content-box; // so inner height equals icon height
+		flex-direction: column;
+		justify-content: center;
 		margin-left: math.ceil($il-workflow-icon-size*0.75);
-		padding: 0 0 $il-workflow-icon-size*1.5 $il-workflow-icon-size;
+		border-left: 1px dashed $il-neutral-color;
+		padding: 0 0 $il-padding-xxxlarge-horizontal $il-workflow-icon-size * 1.5;
+		min-height: $il-workflow-icon-size + 2 * $il-workflow-icon-border;
+		font-size: $il-workflow-icon-size*0.7;
 		.il-workflow-step-label {
 			display: block;
 		}
