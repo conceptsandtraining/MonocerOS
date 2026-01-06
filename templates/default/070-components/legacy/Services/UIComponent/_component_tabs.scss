@@ -5,35 +5,32 @@
 $nav-tabs-active-link-hover-bg: $il-text-color !default;
 $nav-tabs-active-link-hover-color: $il-text-color-invert !default;
 $nav-tabs-active-link-hover-border-color: $il-text-color !default;
-$nav-tabs-border: 1px solid $il-main-border-color !default;
+$nav-tabs-border: 2px solid $nav-tabs-active-link-hover-bg !default;
 /* Services/UIComponent/Tabs */
 
 #ilTab {
 	padding: 0;
-	margin:  $il-padding-base-vertical 0;
+	margin:  $il-padding-xs-vertical 0;
 	border: 0 none;
-	border-bottom: $nav-tabs-border;
+	border-bottom: 2px solid $il-main-dark-bg;
 
 	> li {
 		float: left;
 		// Make the list-items overlay the bottom border
-		margin: 0 $il-padding-xs-horizontal 0 0;
+		margin: 0 0 -2px 0;
 
 		// Actual tabs (as links)
 		> a,
         > .c-tooltip__container > a {
 			margin: 0;
-			margin-right: 2px;
 			font-size: $il-font-size-base;
 			line-height: $il-line-height-base;
-			padding: $il-padding-large-vertical $il-padding-xlarge-horizontal $il-padding-base-vertical;
-			border-bottom: 2px solid;
-			border-color: transparent;
+			padding: $il-padding-xs-vertical $il-padding-small-horizontal;
+			border-bottom: 2px solid transparent;
 			border-radius: $il-border-radius-base $il-border-radius-base 0 0;
 
-			&:hover,
-			&:focus {
-				border-bottom-color: $nav-tabs-active-link-hover-bg;
+			&:hover {
+				border-color: $il-main-bg $il-main-bg $il-main-bg;
 			}
 			@include focus.clear-focus-for-override($clearAfter: true);
 			@include focus.il-focus();
@@ -48,7 +45,7 @@ $nav-tabs-border: 1px solid $il-main-border-color !default;
 				color: $nav-tabs-active-link-hover-color;
 				cursor: default;
 				background-color: $nav-tabs-active-link-hover-bg;
-				border-bottom-color: $nav-tabs-active-link-hover-bg;
+				border-bottom: 2px solid $nav-tabs-active-link-hover-border-color;
 			}
 		}
 	}
@@ -58,18 +55,15 @@ $nav-tabs-border: 1px solid $il-main-border-color !default;
 	z-index: 3;
 }
 
-#ilTab > li > a:focus {
-	border-bottom: 2px solid $nav-tabs-active-link-hover-bg;
-}
 
 /* Sub Tabs */
 #ilSubTab {
-	padding: $il-padding-large-vertical 0;
+	padding: $il-padding-xs-vertical 0;
 	margin: 0;
 
 	> li:first-child > a,
     > li:first-child > .c-tooltip__container > a {
-		padding-left: $il-padding-large-horizontal;
+		padding-left: $il-padding-xs-horizontal;
 	}
 
 
@@ -79,7 +73,7 @@ $nav-tabs-border: 1px solid $il-main-border-color !default;
 		> a,
         > .c-tooltip__container > a {
 			border-radius: 0;
-			padding: $il-padding-base-vertical $il-padding-base;
+			padding: $il-padding-xs-vertical $il-padding-xs-horizontal;
 			font-size: ($il-font-size-small);
 
 			&:hover {
@@ -103,5 +97,5 @@ $nav-tabs-border: 1px solid $il-main-border-color !default;
 }
 
 .il_after_tabs_spacing {
-	margin-bottom: $il-margin-xxlarge-vertical;
+	margin-bottom: $il-margin-xlarge-vertical;
 }
