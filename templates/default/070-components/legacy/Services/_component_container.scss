@@ -128,15 +128,6 @@ div.il_ContainerListItem {
 }
 
 .ilContainerBlockHeader {
-	background-color: $il-main-dark-bg;
-	padding: $il-panel-heading-padding;
-	font-weight: $il-font-weight-base;
-	text-align: left;
-	vertical-align: middle;
-	h3{
-		margin: 0;
-		color: $il-panel-heading-color;
-	}
 	//See headings overlays input field in sorting view 32364
 	.form-control {
 		width: auto;
@@ -163,15 +154,6 @@ div.il_ContainerListItem {
 	background-image: url("#{$il-background-images-path}nav/tree_col.svg");
 }
 
-.ilContainerBlock {
-	width: 100%;
-	clear: both;
-	margin-bottom: 20px;
-	border: $il-panel-border;
-	border-radius: $il-panel-border-radius;
-	-webkit-box-shadow: $il-panel-shadow;
-    box-shadow: $il-panel-shadow;
-}
 
 div#cont_paste_explorer_tree ul.il_Explorer {
 	margin: 0 0 0 24px;

@@ -3,6 +3,7 @@
 @use "../../../010-settings/legacy-settings/legacy-settings_panel" as ls;
 @use "../../../030-tools/_tool_border-radius" as *;
 @use "../../../030-tools/tool_clearfix" as *;
+@use "../../../030-tools/tool_panel-maker" as panel;
 @use "../../../050-layout/basics" as *;
 @use "../../../050-layout/standardpage/" as *;
 @use "../../../050-layout/layout_breakpoints" as break;
@@ -11,227 +12,77 @@
 //
 //##
 
+$il-panel-style-boxed: false !default;
+
 //Valid for all panels (if not overridden)
-.panel {
-	margin-bottom: $il-line-height-computed;
-	border: ls.$il-panel-border;
-	border-radius: ls.$il-panel-border-radius;
-	-webkit-box-shadow: ls.$il-panel-shadow;
-	box-shadow: ls.$il-panel-shadow;
+.panel,
+// legacy panel
+.ilContainerBlock  {
+	@include panel.make-panel-container($il-panel-style-boxed);
 
-	.panel-heading {
-		padding: ls.$il-panel-heading-padding;
-		border-bottom: 1px solid transparent;
-		border: none;
-		@include border-top-radius((ls.$il-panel-border-radius - 1));
-
-		>.dropdown .dropdown-toggle {
-			color: $il-btn-standard-color;
-		}
-	}
-
-	.panel-heading.ilHeader,
-	.panel-heading.ilBlockHeader {
-		background-color: $il-main-dark-bg;
-		margin: 0;
-		border: none;
-
-		h2, h2.ilHeader {
-			margin: 0;
-			color: ls.$il-panel-heading-color;
-		}
-
-		h4, h4.ilBlockHeader {
-			margin: 0;
-			color: ls.$il-panel-heading-color;
-		}
-	}
-
-	.panel-viewcontrols {
-		@include break.on-screen-size(small) {
-			order: 3;
-			width: 100%;
-			justify-content: center;
-		}
-		@include break.on-screen-size(medium) {
-			order: 3;
-			width: 100%;
-			justify-content: center;
-		}
-		@include break.on-screen-size(large) {
-			order: 2;
-			width: auto;
-			flex-grow: 1;
-			justify-content: flex-end;
-		}
+	.panel-heading,
+	.ilContainerBlockHeader:not(.ilHeader) {
+		@include panel.make-panel-header($il-panel-style-boxed);
 	}
 
 	.panel-body {
-		padding: $il-padding-medium-vertical $il-padding-medium-horizontal;
-		background-color: $il-main-bg;
-		@include clearfix;
+		@include panel.make-panel-body($il-panel-style-boxed);
+
+		.panel-sub,
+		> .il-item-group {
+			@include panel.make-sub-panel($il-panel-style-boxed);
+		}
+	}
+
+	.panel-footer {
+		@if($il-panel-style-boxed) {
+			padding: ls.$il-panel-footer-padding;
+			background-color: ls.$il-panel-footer-bg;
+			@include border-bottom-radius((ls.$il-panel-border-radius - 1));
+		}
 	}
 }
 
-.panel-footer {
-	padding: ls.$il-panel-footer-padding;
-	background-color: ls.$il-panel-footer-bg;
-	border-top: 1px solid ls.$il-panel-inner-border;
-	@include border-bottom-radius((ls.$il-panel-border-radius - 1));
-}
-
 //Special assignments for Panels using Flex layouts (Standard, Secondary, Report and Sub)
-.panel-flex{
+.panel-flex {
 	.panel-heading {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
 		gap: $il-margin-small-horizontal;
 	}
-	.panel-title{
+	.panel-title,
+	h2.ilHeader,
+	.ilBlockHeader h4,
+	.ilHeader h4 {
 		order: 1;
+	}
+	.panel-viewcontrols {
+		order: 3;
+		width: 100%;
+		justify-content: center;
 	}
 	.panel-controls {
 		display: flex;
 		gap: $il-margin-small-horizontal;
 		justify-content: flex-end;
 		margin-left: auto;
-		@include break.on-screen-size(small) {
-			order: 2;
-		}
-		@include break.on-screen-size(medium) {
-			order: 2;
-		}
-		@include break.on-screen-size(large) {
-			order: 3;
-		}
-	}
-	h2.ilHeader {
-		flex-grow: 99;
-		flex-shrink: 1;
-		order: 1;
-	}
-	.ilBlockHeader h4,.ilHeader h4{
-		flex-grow: 99;
-		flex-shrink: 1;
-		order: 1;
+		order: 2;
 	}
 }
 
-//Standard Panel
-.panel-primary {
-	h2.ilHeader {
-		font-weight: $il-font-weight-bold;
+//
+// Specific locations
+//
+
+// Dashboard
+#ilContentContainer > .row > #il_right_col {
+	[id*="block_"]:not(:first-child) {
+		margin-top: $il-margin-xlarge-vertical;
 	}
 }
 
-//Secondary Panel
-.panel-secondary{
-	-webkit-box-shadow: ls.$il-panel-shadow;
-	box-shadow: ls.$il-panel-shadow;
-	.panel-heading.ilHeader{
-		h2.ilHeader {
-		}
-
-		h2.ilHeader {
-		}
-	}
-
-	.panel-body {
-		.il-item-group{
-			margin: 0 (-$il-margin-medium-horizontal);
-			h2{
-				padding: $il-padding-medium-vertical $il-padding-large-horizontal;
-			}
-			h3{
-				padding: $il-padding-medium-vertical $il-padding-large-horizontal;
-			}
-
-			&:first-child{
-				margin-top: -$il-margin-medium-vertical;
-			}
-
-			&:last-child{
-				margin-bottom: -$il-margin-medium-vertical;
-			}
-
-			.il-item{
-				padding-left: $il-padding-large-horizontal;
-
-				.media-right{
-					vertical-align: middle;
-				}
-			}
-		}
-	}
-
-	.il-panel-listing-std-container > h2, .panel-body h4{
-		display: inline-block;
-		padding: $il-padding-small-vertical 0;
-		color: ls.$il-panel-heading-color;
-		margin: 0;
-	}
-
-	.il-std-item-container:not(:last-child) {
-		border-bottom: $il-main-border;
-	}
-}
-
-//Sub Panel
-.panel-sub{
-	border: none;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-
-	margin: (-$il-padding-medium-vertical) (-$il-margin-medium-horizontal);
-
-	.panel-body{
-		margin: 0;
-	}
-
-	&:first-child{
-		.panel-heading{
-			padding: ls.$il-panel-heading-padding;
-		}
-	}
-}
-
-//Report Panel
-.il-panel-report {
-	.thumbnail {
-		margin-bottom: 0;
-	}
-	> .panel-body > .panel {
-		margin-bottom: $il-margin-medium-vertical;
-	}
-	.panel-heading{
-		min-height: 34px;
-	}
-
-}
-
-//Listing Panel
-.il-panel-listing-std-container {
-	background-color: $il-main-dark-bg;
-	margin-bottom: $il-standard-page-content-padding;
-
-	> h2 {
-		color: ls.$il-panel-heading-color;
-		font-weight: $il-font-weight-bold;
-		float: left;
-		padding: ls.$il-panel-heading-padding;
-		margin: 0;
-		line-height: $il-line-height-large;
-	}
-
-	.dropdown {
-		float: right;
-	}
-	> .dropdown {
-		padding: ls.$il-panel-heading-padding;
-
-		&:not(:last-child){
-			padding-bottom: $il-padding-small-vertical;
-		}
-	}
+// Repository
+#il_center_col .ilContainerBlock {
+	margin-bottom: $il-margin-xlarge-vertical;
 }

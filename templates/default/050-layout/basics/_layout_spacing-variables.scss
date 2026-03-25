@@ -22,7 +22,7 @@ $_spacing-medium-horizontal: $_spacing-medium-vertical * $_vertical-to-horizonta
 $_spacing-large-vertical: t-scale.scale-with-ratio($scale-ratio, 0.75, $spacing-base);
 $_spacing-large-horizontal: $_spacing-large-vertical * $_vertical-to-horizontal-ratio;
 
-$_spacing-xlarge-vertical: t-scale.scale-with-ratio($scale-ratio, 1, $spacing-base);
+$_spacing-xlarge-vertical: t-scale.scale-with-ratio($scale-ratio, 3, $spacing-base);
 $_spacing-xlarge-horizontal: $_spacing-xlarge-vertical * $_vertical-to-horizontal-ratio;
 
 //
@@ -75,4 +75,4 @@ $spacers: (
     ) !default;
 // scss-docs-end spacer-variables-maps
 
-$grid-gutter-width: $il-padding-large-horizontal !default;
+$grid-gutter-width: $il-padding-xlarge-horizontal !default;

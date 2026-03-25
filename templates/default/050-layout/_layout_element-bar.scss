@@ -1,8 +1,8 @@
 @use "../050-layout/basics/" as *;
 
-$l-bar__gap--elements: $il-margin-small-horizontal;
-$l-bar__gap--groups: $il-margin-large-horizontal;
-$l-bar__element__margin-bottom: $il-margin-large-vertical; // this margin separates stacking elements on small screens
+$l-bar__gap--elements: $il-margin-xs-horizontal;
+$l-bar__gap--groups: $il-margin-small-horizontal;
+$l-bar__element__margin-bottom: $il-margin-small-vertical; // this margin separates stacking elements on small screens
 
 // bridge into CSS variables, so there is something to override locally without counter-styling
 :root {
