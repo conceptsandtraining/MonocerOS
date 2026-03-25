@@ -5540,8 +5540,11 @@ a[aria-disabled].il-link.link-bulky:hover {
 }
 
 .il-workflow-container {
-  list-style: none;
   padding: 0 6px;
+  list-style: none;
+}
+.il-workflow-container .il-workflow-step {
+  display: flex;
 }
 .il-workflow-container .il-workflow-step:before {
   background-color: white;
@@ -5549,13 +5552,12 @@ a[aria-disabled].il-link.link-bulky:hover {
   border-radius: 50%;
   color: white;
   content: "";
+  position: absolute;
   font-family: Glyphicons Halflings;
   font-size: 11px;
   height: 22px;
   line-height: 22px;
   margin-left: 5px;
-  padding-left: 0px;
-  position: absolute;
   text-align: center;
   width: 22px;
 }
@@ -5616,6 +5618,9 @@ a[aria-disabled].il-link.link-bulky:hover {
   line-height: 33px;
   background-color: #4c6586;
 }
+.il-workflow-container .active .text {
+  min-height: 37px;
+}
 .il-workflow-container .active .text .il-workflow-step-label,
 .il-workflow-container .active .text .il-workflow-step-label .btn.btn-link {
   color: #4c6586;
@@ -5623,10 +5628,15 @@ a[aria-disabled].il-link.link-bulky:hover {
   font-weight: 400;
 }
 .il-workflow-container .text {
-  border-left: 1px dashed #2c2c2c;
-  font-size: 15.4px;
+  display: flex;
+  box-sizing: content-box;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 17px;
-  padding: 0 0 33px 22px;
+  border-left: 1px dashed #2c2c2c;
+  padding: 0 0 18px 33px;
+  min-height: 26px;
+  font-size: 15.4px;
 }
 .il-workflow-container .text .il-workflow-step-label {
   display: block;
