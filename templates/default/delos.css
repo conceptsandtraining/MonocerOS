@@ -19873,7 +19873,7 @@ a.ilMediaLightboxClose:hover {
 }
 #ilTab > li > a:hover,
 #ilTab > li > .c-tooltip__container > a:hover {
-  border-color: white white white;
+  border-color: white white #161616;
 }
 #ilTab > li > a:focus,
 #ilTab > li > .c-tooltip__container > a:focus {

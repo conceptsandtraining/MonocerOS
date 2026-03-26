@@ -30,7 +30,7 @@ $nav-tabs-border: 2px solid $nav-tabs-active-link-hover-bg !default;
 			border-radius: $il-border-radius-base $il-border-radius-base 0 0;
 
 			&:hover {
-				border-color: $il-main-bg $il-main-bg $il-main-bg;
+				border-color: $il-main-bg $il-main-bg $nav-tabs-active-link-hover-bg;
 			}
 			@include focus.clear-focus-for-override($clearAfter: true);
 			@include focus.il-focus();
