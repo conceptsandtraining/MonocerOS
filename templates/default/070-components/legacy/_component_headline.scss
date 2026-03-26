@@ -68,8 +68,8 @@ div.ilHeaderDesc {
 }
 
 div.il_HeaderInner {
-	padding: $il-padding-xlarge-vertical 0;
-	margin-bottom: 5px;
+	padding: $il-padding-large-vertical 0;
+	// mOS-patch margin-bottom: 5px;
 	overflow: visible;
 	@media only screen and (max-width: $il-grid-float-breakpoint-max) {
 		color: $il-text-color;

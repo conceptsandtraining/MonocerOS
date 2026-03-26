@@ -11295,8 +11295,7 @@ div.ilHeaderDesc {
 }
 
 div.il_HeaderInner {
-  padding: 38px 0;
-  margin-bottom: 5px;
+  padding: 20px 0;
   overflow: visible;
 }
 @media only screen and (max-width: 991px) {
@@ -20002,10 +20001,6 @@ a.ilMediaLightboxClose:hover {
   color: #4c6586;
   background-color: transparent;
   text-decoration: underline;
-}
-
-.il_after_tabs_spacing {
-  margin-bottom: 38px;
 }
 
 /* Services/UIComponent/Toolbar */
