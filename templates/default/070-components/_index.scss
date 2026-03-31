@@ -106,7 +106,8 @@
 @use "./legacy/Services/_component_container.scss";
 @use "./legacy/Services/_component_copage.scss";
 @use "./legacy/Services/_component_fileupload.scss";
-@use "./legacy/Services/_component_form.scss";
+// @use "./legacy/Services/_component_form.scss";
+@use "./legacy/Services/mOS_component_form";
 @use "./legacy/Services/_component_help.scss";
 @use "./legacy/Services/_component_infoscreen.scss";
 @use "./legacy/Services/_component_init.scss";

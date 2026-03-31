@@ -528,7 +528,7 @@
   line-height: 1.333;
   background-color: transparent;
   color: #161616;
-  min-height: 32px;
+  min-height: 40px;
   width: 100%;
   padding: 9px 26.66px;
   justify-content: start;
@@ -2093,7 +2093,7 @@ input[type=url],
 input[type=number],
 input[type=password],
 select {
-  min-height: 32px;
+  min-height: 40px;
 }
 
 input[type=radio],
@@ -2632,8 +2632,8 @@ ol.breadcrumb > li + li:before {
   font-size: inherit;
   font-weight: 400;
   text-decoration: none;
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -2681,8 +2681,8 @@ input.btn, input.il-link.link-bulky,
 }
 
 .btn-default, .navbar-form > a {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -2733,8 +2733,8 @@ input.btn, input.il-link.link-bulky,
 }
 
 .btn-primary {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -2817,8 +2817,8 @@ input.btn, input.il-link.link-bulky,
   font-size: inherit;
   font-weight: 400;
   text-decoration: none;
-  min-height: 46px;
-  min-width: 46px;
+  min-height: 54px;
+  min-width: 54px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -3340,7 +3340,7 @@ input.btn, input.il-link.link-bulky,
 
 .btn-bulky, .il-link.link-bulky,
 .il-drilldown .menulevel {
-  min-height: 57.6px;
+  min-height: 72px;
   width: 100%;
   font-size: 1rem;
   padding: 16px 21.328px;
@@ -3429,8 +3429,8 @@ input.btn, input.il-link.link-bulky,
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  min-height: 57.6px;
-  min-width: 57.6px;
+  min-height: 72px;
+  min-width: 72px;
   font-size: 1.241rem;
   padding: 20px 26.66px;
   gap: 9.331px;
@@ -3493,8 +3493,8 @@ button .minimize, button .close {
   white-space: nowrap;
   padding: 7px 9.331px;
   margin: 9px 11.997px 9px 0;
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -4856,16 +4856,16 @@ hr.il-divider-with-label {
 .c-form [data-il-ui-component=markdown-field-input] > .c-input__field .c-field-markdown textarea,
 .c-form [data-il-ui-component=url-field-input] .c-input__field input {
   width: 100%;
-  padding: 9px 11.997px;
+  padding: 7px 9.331px;
   font-size: 0.866rem;
 }
 .c-form [data-il-ui-component=datetime-field-input] .c-input__field input,
 .c-form [data-il-ui-component=numeric-field-input] .c-input__field input {
-  padding: 9px 11.997px;
+  padding: 7px 9.331px;
   font-size: 0.866rem;
 }
 .c-form [data-il-ui-component=select-field-input] .c-input__field select {
-  padding: 9px 11.997px;
+  padding: 7px 9.331px;
 }
 
 .il-std-item-container:not(:last-child) {
@@ -5173,7 +5173,7 @@ header {
 .breadcrumbs {
   position: sticky;
   top: 0;
-  min-height: 46px;
+  min-height: 54px;
   align-items: center;
   background-color: white;
   display: flex;
@@ -7149,8 +7149,8 @@ code {
   font-size: inherit;
   font-weight: 400;
   text-decoration: none;
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -7206,8 +7206,8 @@ input.btn, .c-drilldown input.c-drilldown__menulevel--trigger, input.il-link.lin
   }
 }
 .btn-default, .navbar-form > a {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -7263,8 +7263,8 @@ input.btn, .c-drilldown input.c-drilldown__menulevel--trigger, input.il-link.lin
 }
 
 .btn-primary {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -7334,8 +7334,8 @@ input.btn, .c-drilldown input.c-drilldown__menulevel--trigger, input.il-link.lin
   font-size: inherit;
   font-weight: 400;
   text-decoration: none;
-  min-height: 46px;
-  min-width: 46px;
+  min-height: 54px;
+  min-width: 54px;
   font-size: 0.866rem;
   padding: 7px 9.331px;
   gap: 9.331px;
@@ -7490,7 +7490,7 @@ input.btn, .c-drilldown input.c-drilldown__menulevel--trigger, input.il-link.lin
 
 .btn-bulky, .c-drilldown .c-drilldown__menulevel--trigger, .il-link.link-bulky,
 .il-drilldown .menulevel {
-  min-height: 57.6px;
+  min-height: 72px;
   width: 100%;
   font-size: 1rem;
   padding: 16px 21.328px;
@@ -7593,8 +7593,8 @@ input.btn, .c-drilldown input.c-drilldown__menulevel--trigger, input.il-link.lin
 }
 
 .btn-lg {
-  min-height: 57.6px;
-  min-width: 57.6px;
+  min-height: 72px;
+  min-width: 72px;
   font-size: 1.241rem;
   padding: 20px 26.66px;
   gap: 9.331px;
@@ -7666,7 +7666,7 @@ button .minimize, button .close {
   list-style: none;
 }
 .c-drilldown .c-drilldown__menu {
-  min-height: 345.6px;
+  min-height: 432px;
   position: relative;
 }
 .c-drilldown header {
@@ -7832,7 +7832,7 @@ button .minimize, button .close {
   .c-drilldown:not(.c-drilldown--filtered) .c-drilldown__menulevel--engagedparent > li:not(.c-drilldown__menuitem--filtered) {
     display: flex;
     flex-direction: row;
-    max-height: 57.6px;
+    max-height: 72px;
     flex: 0 1 50%;
     margin-bottom: 2px;
   }
@@ -8212,6 +8212,13 @@ div.alert ul > li:before {
   padding-left: 11.997px;
 }
 
+.panel,
+.ilContainerBlock {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .panel + .panel,
 .panel + .ilContainerBlock,
 .ilContainerBlock + .panel,
@@ -8222,7 +8229,33 @@ div.alert ul > li:before {
 .panel .ilContainerBlockHeader:not(.ilHeader),
 .ilContainerBlock .panel-heading,
 .ilContainerBlock .ilContainerBlockHeader:not(.ilHeader) {
-  margin-bottom: 9px;
+  padding: 16px 21.328px;
+  background-color: #f9f9f9;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel .panel-heading h1, .panel .panel-heading h2, .panel .panel-heading h3, .panel .panel-heading h4, .panel .panel-heading h5,
+.panel .ilContainerBlockHeader:not(.ilHeader) h1,
+.panel .ilContainerBlockHeader:not(.ilHeader) h2,
+.panel .ilContainerBlockHeader:not(.ilHeader) h3,
+.panel .ilContainerBlockHeader:not(.ilHeader) h4,
+.panel .ilContainerBlockHeader:not(.ilHeader) h5,
+.ilContainerBlock .panel-heading h1,
+.ilContainerBlock .panel-heading h2,
+.ilContainerBlock .panel-heading h3,
+.ilContainerBlock .panel-heading h4,
+.ilContainerBlock .panel-heading h5,
+.ilContainerBlock .ilContainerBlockHeader:not(.ilHeader) h1,
+.ilContainerBlock .ilContainerBlockHeader:not(.ilHeader) h2,
+.ilContainerBlock .ilContainerBlockHeader:not(.ilHeader) h3,
+.ilContainerBlock .ilContainerBlockHeader:not(.ilHeader) h4,
+.ilContainerBlock .ilContainerBlockHeader:not(.ilHeader) h5 {
+  margin: 0;
+}
+.panel .panel-body,
+.ilContainerBlock .panel-body {
+  padding: 16px 21.328px;
+  background-color: white;
 }
 .panel .panel-body::after,
 .ilContainerBlock .panel-body::after {
@@ -8230,6 +8263,34 @@ div.alert ul > li:before {
   clear: both;
   content: "";
 }
+.panel .panel-body .panel-sub,
+.panel .panel-body > .il-item-group,
+.ilContainerBlock .panel-body .panel-sub,
+.ilContainerBlock .panel-body > .il-item-group {
+  border: none;
+  border-radius: 0;
+  margin: -16px -21.328px;
+}
+.panel .panel-body .panel-sub:not(:first-child),
+.panel .panel-body > .il-item-group:not(:first-child),
+.ilContainerBlock .panel-body .panel-sub:not(:first-child),
+.ilContainerBlock .panel-body > .il-item-group:not(:first-child) {
+  margin-top: 0;
+}
+.panel .panel-body .panel-sub:not(:last-child),
+.panel .panel-body > .il-item-group:not(:last-child),
+.ilContainerBlock .panel-body .panel-sub:not(:last-child),
+.ilContainerBlock .panel-body > .il-item-group:not(:last-child) {
+  margin-bottom: 0;
+}
+.panel .panel-footer,
+.ilContainerBlock .panel-footer {
+  padding: 16px 21.328px;
+  background-color: #f9f9f9;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
 .panel-flex .panel-heading {
   display: flex;
   align-items: center;
@@ -8255,6 +8316,7 @@ div.alert ul > li:before {
   order: 2;
 }
 
+#ilContentContainer > .row > #il_center_col [id*=block_]:not(:first-child),
 #ilContentContainer > .row > #il_right_col [id*=block_]:not(:first-child) {
   margin-top: 38px;
 }
@@ -10362,7 +10424,7 @@ th.c-table-data__cell {
 
 @media screen and (min-width: 993px) {
   .breadcrumbs + #mainspacekeeper th.c-table-data__cell {
-    top: 45px;
+    top: 53px;
   }
 }
 
@@ -10727,8 +10789,8 @@ tr.c-table-data__row.c-table-data__row--drag-settle {
 .il-viewcontrol-pagination,
 .il-viewcontrol-mode {
   width: fit-content;
-  min-height: 46px;
-  min-width: 46px;
+  min-height: 54px;
+  min-width: 54px;
   padding: 7px 9.331px;
   border: 1px solid #e2e8ef;
   background-color: #e2e8ef;
@@ -10782,8 +10844,8 @@ tr.c-table-data__row.c-table-data__row--drag-settle {
 .il-viewcontrol-mode > .btn-ctrl,
 .il-viewcontrol-sortation .dropdown.il-viewcontrol-mode > .btn-default.btn,
 .il-table-presentation-viewcontrols .l-bar__space-keeper .l-bar__group .l-bar__element.il-viewcontrol-mode > .btn-default.btn {
-  min-height: 32px;
-  min-width: 32px;
+  min-height: 40px;
+  min-width: 40px;
   border-radius: 10px;
 }
 .il-viewcontrol-sortation > .btn-ctrl:has(> .glyph.disabled), .il-viewcontrol-sortation > .btn-default.btn:has(> .glyph.disabled),
@@ -16750,509 +16812,131 @@ p#copg-auto-save {
   padding-top: 3px;
 }
 
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  min-width: 0;
+.form-horizontal .ilFormHeader:not(:first-child) {
+  margin-top: 38px;
 }
-
-label {
-  cursor: pointer;
+.form-horizontal .form-group:not(:first-child) {
+  margin-top: 16px;
+}
+.form-horizontal .form-group .form-group {
+  margin-top: 16px;
+}
+.form-horizontal label.control-label {
+  width: 33.33%;
+}
+.form-horizontal label.control-label ~ div {
+  width: 66.66%;
+}
+@media screen and (max-width: 768px) {
+  .form-horizontal label.control-label {
+    width: 100%;
+  }
+  .form-horizontal label.control-label ~ div {
+    width: 100%;
+  }
+}
+.form-horizontal .control-label {
   display: inline-block;
-  max-width: 100%;
-  font-weight: 400;
+  cursor: pointer;
+  margin-top: 9px;
 }
-
-.form-horizontal label {
-  margin-bottom: 5px;
+.form-horizontal input[type=text],
+.form-horizontal input[type=number],
+.form-horizontal input[type=date],
+.form-horizontal input[type=datetime-local],
+.form-horizontal textarea {
+  min-width: 100%;
 }
-
-input[type=search] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  appearance: none;
+.form-horizontal .radio {
+  margin-top: 9px;
 }
-
-.form-horizontal input[type=radio],
+.form-horizontal .radio label {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
 .form-horizontal input[type=checkbox] {
-  margin: 4px 0 0;
+  margin-top: 16px;
 }
-
-input[type=file] {
-  display: block;
+.form-horizontal .ilFormHeader,
+.form-horizontal .ilFormFooter {
+  display: grid;
+  grid-template-columns: 1fr max-content;
 }
-
-input[type=range] {
-  display: block;
+@media screen and (max-width: 768px) {
+  .form-horizontal .ilFormHeader,
+  .form-horizontal .ilFormFooter {
+    grid-template-columns: auto;
+  }
+}
+.form-horizontal .ilFormHeader > *,
+.form-horizontal .ilFormFooter > * {
   width: 100%;
+  margin-top: 9px;
+}
+.form-horizontal .ilFormHeader .ilFormRequired--top,
+.form-horizontal .ilFormHeader .ilFormRequired,
+.form-horizontal .ilFormHeader .ilFormCmds,
+.form-horizontal .ilFormFooter .ilFormRequired--top,
+.form-horizontal .ilFormFooter .ilFormRequired,
+.form-horizontal .ilFormFooter .ilFormCmds {
+  margin-top: 0;
+}
+@media screen and (max-width: 768px) {
+  .form-horizontal .ilFormHeader .ilFormRequired--top,
+  .form-horizontal .ilFormHeader .ilFormRequired,
+  .form-horizontal .ilFormFooter .ilFormRequired--top,
+  .form-horizontal .ilFormFooter .ilFormRequired {
+    margin-top: 9px;
+  }
+}
+.form-horizontal .ilFormHeader .ilFormCmds,
+.form-horizontal .ilFormFooter .ilFormCmds {
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+@media screen and (max-width: 768px) {
+  .form-horizontal .ilFormHeader .ilFormCmds,
+  .form-horizontal .ilFormFooter .ilFormCmds {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-self: end;
+  }
+}
+.form-horizontal .ilFormFooter {
+  margin-top: 38px;
 }
 
-select[multiple],
-select[size] {
-  height: auto;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  height: 32px;
-  padding: 9px 11.997px;
+.form-group .help-block {
+  margin-top: 7px;
   font-size: 0.866rem;
-  line-height: 1.333;
-  color: #161616;
-  background-color: white;
-  background-image: none;
+}
+.form-group input[type=text],
+.form-group input[type=number],
+.form-group input[type=date],
+.form-group input[type=datetime-local],
+.form-group textarea {
   border: 1px solid #757575;
-  border-radius: 0px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  padding: 9px 11.997px;
 }
-.form-control:focus-visible {
-  outline: 3px solid #0078D7;
-  box-shadow: inset 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 5px #FFFFFF;
+.form-group .radio input,
+.form-group input[type=checkbox] {
+  width: 1.2rem;
+  height: 1.2rem;
 }
-.form-control::-moz-placeholder {
-  color: #6f6f6f;
-  opacity: 1;
-}
-.form-control:-ms-input-placeholder {
-  color: #6f6f6f;
-}
-.form-control::-webkit-input-placeholder {
-  color: #6f6f6f;
-}
-.form-control[required]::-moz-placeholder {
-  color: #161616;
-  opacity: 1;
-}
-.form-control[required]:-ms-input-placeholder {
-  color: #161616;
-}
-.form-control[required]::-webkit-input-placeholder {
-  color: #161616;
-}
-.form-control::-ms-expand {
-  border: 0;
-  background-color: transparent;
-}
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.form-group .form-control[disabled], .form-group .form-control[readonly], fieldset[disabled] .form-group .form-control {
   background-color: #f9f9f9;
   opacity: 1;
 }
-.form-control[disabled], fieldset[disabled] .form-control {
-  cursor: not-allowed;
-}
-textarea .form-control {
-  height: auto;
-}
-
-select.form-control {
-  max-width: 100%;
-}
-
-.form-control.form-control-sm.il-input-tag-container {
-  height: auto;
-}
-
-textarea.form-control {
-  height: auto;
-}
-
-input[type=search] {
-  -webkit-appearance: none;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type=date].form-control,
-  input[type=time].form-control,
-  input[type=datetime-local].form-control,
-  input[type=month].form-control {
-    line-height: 41px;
-  }
-}
-.form-group {
-  margin-bottom: 20px;
-}
-
-.radio,
-.checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.radio.disabled label, fieldset[disabled] .radio label,
-.checkbox.disabled label,
-fieldset[disabled] .checkbox label {
-  cursor: not-allowed;
-}
-.radio label,
-.checkbox label {
-  min-height: 21px;
-  padding-left: 20px;
-  margin-bottom: 0;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-.radio input[type=radio],
-.radio-inline input[type=radio],
-.checkbox input[type=checkbox],
-.checkbox-inline input[type=checkbox] {
-  display: inline-block;
-  margin-left: -20px;
-  margin-top: 7px;
-  min-width: 13px;
-}
-@media only screen and (max-width: 991px) {
-  .radio input[type=radio],
-  .radio-inline input[type=radio],
-  .checkbox input[type=checkbox],
-  .checkbox-inline input[type=checkbox] {
-    min-width: 16px;
-  }
-}
-
-.radio input[type=radio],
-.radio-inline input[type=radio] {
-  vertical-align: top;
-}
-
-.radio + .radio,
-.checkbox + .checkbox {
-  margin-top: -5px;
-}
-
-.radio-inline,
-.checkbox-inline {
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-  margin-bottom: 0;
-  vertical-align: top;
-  line-height: 41px;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-div.radio label.radio-inline {
-  line-height: 41px;
-}
-
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px;
-}
-
-input[type=radio],
-input[type=checkbox] {
-  cursor: pointer;
-}
-input[type=radio][disabled], input[type=radio].disabled, fieldset[disabled] input[type=radio],
-input[type=checkbox][disabled],
-input[type=checkbox].disabled,
-fieldset[disabled] input[type=checkbox] {
-  cursor: not-allowed;
-}
-
-.radio-inline.disabled, fieldset[disabled] .radio-inline,
-.checkbox-inline.disabled,
-fieldset[disabled] .checkbox-inline {
-  cursor: not-allowed;
-}
-
-.radio.disabled label, fieldset[disabled] .radio label,
-.checkbox.disabled label,
-fieldset[disabled] .checkbox label {
-  cursor: not-allowed;
-}
-
-.help-block {
-  display: block;
-  color: #161616;
-  font-size: 0.866rem;
-  margin: 16px 0 21.328px;
-  clear: both;
-}
-.help-block:last-child {
-  margin: 2px 0 10px;
-}
-.help-block.alert-danger {
-  margin-bottom: 9px;
-}
-
-@media (min-width: 768px) {
-  .form-inline .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: top;
-  }
-  .form-inline .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: top;
-  }
-  .form-inline .form-control-static {
-    display: inline-block;
-  }
-  .form-inline .input-group {
-    display: inline-table;
-    vertical-align: middle;
-  }
-  .form-inline .input-group .input-group-addon,
-  .form-inline .input-group .input-group-btn,
-  .form-inline .input-group .form-control {
-    width: auto;
-  }
-  .form-inline .input-group > .form-control {
-    width: 100%;
-  }
-  .form-inline .control-label {
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .form-inline .radio,
-  .form-inline .checkbox {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  .form-inline .radio label,
-  .form-inline .checkbox label {
-    padding-left: 0;
-  }
-  .form-inline .radio input[type=radio],
-  .form-inline .checkbox input[type=checkbox] {
-    position: relative;
-    margin-left: 0;
-  }
-  .form-inline .has-feedback .form-control-feedback {
-    top: 0;
-  }
-}
-
-.form-horizontal {
-  margin-bottom: 38px;
-  background: white;
-  /*
-  // Reset spacing and right align labels, but scope to media queries so that
-  // labels on narrow viewports stack the same as a default form example.
-  @media (min-width: $screen-sm-min) {
-  	.control-label {
-  		text-align: right;
-  		margin-bottom: 0;
-  		padding-top: ($il-padding-small-vertical + 1); // Default padding plus a border
-  	}
-  } */
-}
-.form-horizontal .form-group {
-  margin: 0px;
-  padding-top: 9px;
-  bottom: 9px;
-  background-color: white;
-}
-.form-horizontal .row > input.form-control, .form-horizontal .row > textarea.form-control, .form-horizontal .row > select.form-control {
-  margin-left: 50.654px;
-}
-.form-horizontal .row > .btn, .form-horizontal .row > input.btn, .form-horizontal .row > .tox-tinymce, .form-horizontal .row > div.input {
-  margin-left: 50.654px;
-}
-.form-horizontal .row > .tox-tinymce {
-  padding-left: 0;
-  padding-right: 0;
-}
-.form-horizontal .radio,
-.form-horizontal .checkbox,
-.form-horizontal .radio-inline,
-.form-horizontal .checkbox-inline {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  line-height: normal;
-}
-.form-horizontal .radio,
-.form-horizontal .checkbox {
-  min-height: 31px;
-}
-.form-horizontal label {
-  color: #161616;
-  font-size: 100%;
-  padding-right: 53.32px;
-}
-.form-horizontal .control-label {
-  text-align: left;
-  padding-bottom: 10px;
-  min-height: 37px;
-}
-@media only screen and (max-width: 991px) {
-  .form-horizontal .control-label {
-    min-height: auto;
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
-}
-.form-horizontal .control-label.col-sm-3.il_textarea {
-  width: 100%;
-}
-.form-horizontal .control-label > .asterisk {
-  padding-left: 16px;
-}
-
-.ilFormHeader {
-  padding: 38px 0 38px 26.66px;
-}
-.ilFormHeader:not(:first-child) {
-  margin: 26.66px 0 0 0;
-  border-top: 1px solid #dddddd;
-}
-.ilFormHeader .ilHeader {
-  vertical-align: middle;
-}
-.ilFormHeader .ilFormCmds {
-  margin: 0;
-  float: right;
-}
-.ilFormHeader h3 {
-  margin: 0;
-}
-
-.ilFormHeader,
-.ilFormFooter {
-  color: #161616;
-  background-color: white;
-}
-
-.ilSubForm {
-  background-color: #f0f0f0;
-  padding: 9px 0;
-  margin-bottom: 20px;
-  margin-left: 50.654px;
-}
-.ilSubForm .form-group {
-  background-color: #f0f0f0;
-  margin: 0;
-}
-@media (max-width: 991px) {
-  .ilSubForm .form-group {
-    margin: 16px 0;
-  }
-}
-.ilSubForm .col-sm-9.il_textarea {
-  width: 100%;
-}
-
-.ilFormRequired--top {
-  padding-bottom: 9.331px;
-}
-
-.ilFormFooter {
-  margin: 0;
-  padding: 9px 0 9px 0;
-}
-
-.ilFormFooter .ilFormCmds {
-  text-align: right;
-}
-
-/* jQuery ui autocomplete menu */
-input.ilHFormHighlighted,
-.ui-state-focus {
-  background-color: #ff9;
-}
-
-div.ilFormExternalSetting {
-  margin-bottom: 10px;
-}
-
-div.ilFormExternalSetting ul {
-  margin: 2px 0;
-  padding-left: 25px;
-}
-
-div.ilFormExternalSetting span {
-  color: #B54F00;
-  /* font-style: italic; */
-}
-
-div[id^=ilFormField] {
-  margin-bottom: 10px;
-}
-
-/* Hierarchy Form */
-div.ilHFormHeader,
-div.ilHFormFooter {
-  color: #161616;
-  background-color: white;
-  padding: 4px 0 4px 22px;
-}
-
-div.ilHFormContent {
-  padding: 20px 10px 20px 0px;
-}
-div.ilHFormContent table {
-  width: 100%;
-}
-
-div.ilHFormItem {
-  margin-bottom: 5px;
-  display: table-row;
-}
-
-div.ilHFormHeader .ilFormCmds,
-div.ilHFormFooter .ilFormCmds {
-  float: right;
-}
-
-.ilHFormExpIcon,
-.ilHFormCheckbox,
-.ilHFormIcon {
-  min-width: 20px;
-  padding: 0;
-}
-
-.ilHFormItemCmd {
-  padding: 0 10px;
-}
-
-.ilHFormExpIcon img,
-.ilHFormIcon img {
-  width: 19px;
-  height: 19px;
-}
-
-.ilHFormInput,
-.ilHFormInput input.form-control {
-  width: 100%;
-}
-
-.wzdrow .form-control {
-  height: 1.333;
-}
-
-.ilHFormDropArea {
-  margin: 6px 0;
-  width: auto;
-}
-
-/* experimental: bootstrap'ed file upload */
-.btn-file {
+.form-group .btn-file {
   position: relative;
   overflow: hidden;
 }
-.btn-file:focus-within {
+.form-group .btn-file:focus-within {
   outline: 3px solid #0078D7;
   box-shadow: inset 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 5px #FFFFFF;
 }
-
-.btn-file input[type=file] {
+.form-group .btn-file input[type=file] {
   position: absolute;
   top: 0;
   right: 0;
@@ -17268,34 +16952,15 @@ div.ilHFormFooter .ilFormCmds {
   display: block;
 }
 
-input:invalid {
-  background-color: #ffebeb;
-  border-color: #d00;
-}
-
-.bootstrap-datetimepicker-widget {
-  z-index: 2000;
-}
-
-/* provisory fix for #0021322  */
-div[id$=color-picker-menu] {
-  z-index: 3;
-}
-
-.c-form__autocomplete {
-  position: absolute;
-  background-color: white;
-  border-left: 1px solid #dddddd;
-  border-right: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
+fieldset {
+  padding: 0;
   margin: 0;
-  padding: 9.331px;
-  list-style: none;
-  z-index: 1;
-  cursor: default;
+  border: 0;
+  min-width: 0;
 }
-.c-form__autocomplete li:hover {
-  background-color: #e2e8ef;
+
+.form-inline br {
+  display: none;
 }
 
 /* Services/Help */

@@ -1,0 +1,237 @@
+@use "../../../010-settings" as settings;
+@use "../../../010-settings/legacy-settings/legacy-settings_form" as legacy-form;
+@use "../../../050-layout/layout_breakpoints" as breakpoints;
+@use "../../../030-tools/tool_focus-outline" as focus;
+@use "../../../050-layout/basics" as layout-basics;
+
+///
+// Refactoring of the **legacy forms** for ILIAS Essential.
+// Vertical spacing of column layout is taken care of by bootstrap `.row` class.
+// Replaces `./legacy/Services/_component_form.scss`
+// @group legacy-form
+// @author Ferdinand Engländer <ferdinand.englaender@concept-and-training.de>
+///
+
+/// between related elements
+$spacing-items-vertical: layout-basics.$il-margin-medium-vertical !default;
+/// between less related elements
+$spacing-groups-vertical: layout-basics.$il-margin-xlarge-vertical !default;
+/// for closely related elements that just need a small visual buffer
+$spacing-small-buffer-vertical: layout-basics.$il-margin-small-vertical !default;
+
+/// not only for input fields but also for the top of labels to visually match in baseline
+$input-field-padding-vertical: layout-basics.$il-padding-small-vertical;
+/// complete input padding shorthand
+/// @type list
+$input-field-padding: $input-field-padding-vertical layout-basics.$il-padding-small-horizontal !default;
+
+/// left label column
+$left-form-column-width: 33.33% !default;
+/// right label column
+$right-form-column-width: 66.66% !default;
+
+$input-field-bg-color: legacy-form.$il-input-bg !default;
+$input-field-border-color: legacy-form.$il-input-border-color !default;
+$input-field-disabled-bg-color: legacy-form.$il-input-bg-disabled !default;
+
+///
+// This overrides the col- classes in the html templates. Two columns on desktop, one column stack in small viewports.
+// Apply to the left column, the label. Assumes there is only one div sibling, the input column.
+// @example html
+//    <div class="row">
+//      <div class="col left-column">{LABEL}</div>
+//      <div class="col right-column">{INPUT-FIELD}</div>
+//    </div>
+// @example scss
+//    .left-column {
+//      @include two-col-form-layout();
+//    }
+///
+@mixin two-col-form-layout {
+  width: $left-form-column-width;
+  ~ div {
+    width: $right-form-column-width;
+  }
+  @include breakpoints.on-screen-size("small") {
+    width: 100%;
+    ~ div {
+      width: 100%;
+    }
+  }
+}
+
+///
+// Use to style anything that looks like a textfield in the current context
+// @todo Examine if/where/when they could used in elements layer generally for both legacy and UI component forms.
+///
+@mixin textfield-like-inputs {
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  textarea {
+    @content;
+  }
+}
+
+//
+// # Common Horizontal Layout
+//
+.form-horizontal {
+  // ## Spacing Section Groups
+  .ilFormHeader:not(:first-child) {
+    margin-top: $spacing-groups-vertical;
+  }
+  // ## Spacing Input Rows
+  .form-group:not(:first-child) {
+    margin-top: $spacing-items-vertical;
+  }
+
+  .form-group .form-group {
+    margin-top: $spacing-items-vertical;
+  }
+
+  // This styles against the html template's col classes.
+  // We want different col widths for our boxed layout without changing the html template (for now).
+  // TODO: Once we decide to stray from core html templates: Remove col classes in html template.
+  label.control-label {
+    @include two-col-form-layout();
+  }
+
+  // ## Form Elements
+  .control-label {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: $spacing-small-buffer-vertical; // should be identical to input field vertical padding
+  }
+
+  @include textfield-like-inputs {
+    min-width: 100%;
+  }
+
+  .radio {
+    margin-top: layout-basics.$il-margin-small-vertical;
+    label {
+      display: flex;
+      gap: $spacing-small-buffer-vertical;
+      align-items: center;
+    }
+  }
+
+  input[type="checkbox"] {
+    margin-top: layout-basics.$il-margin-medium-vertical;
+  }
+
+  .ilFormHeader,
+  .ilFormFooter {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    @include breakpoints.on-screen-size("small") {
+      grid-template-columns: auto;
+    }
+    > * {
+      width: 100%; // TODO: This refactoring counteracts .col classes. Eventually remove them in core html template.
+      margin-top: $spacing-small-buffer-vertical;
+    }
+    // visually those appear to be 'first-child', so they shouldn't have any space above
+    .ilFormRequired--top, // TODO: html needs both base and modifier (BEM convention), then modifier not needed here
+    .ilFormRequired,
+    .ilFormCmds {
+      margin-top: 0;
+    }
+    @include breakpoints.on-screen-size("small") {
+      .ilFormRequired--top, // TODO: html needs both base and modifier (BEM convention), then modifier not needed here
+      .ilFormRequired {
+        margin-top: $spacing-small-buffer-vertical;
+      }
+    }
+    // The button fully occupies column 2, so all undefined divs will stack in column 1.
+    .ilFormCmds {
+      // aside to the right
+      grid-row: 1 / 4;
+      grid-column: 2 / 3;
+      @include breakpoints.on-screen-size("small") {
+        // above to the right
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        justify-self: end;
+      }
+    }
+  }
+  .ilFormFooter {
+    margin-top: $spacing-groups-vertical;
+  }
+}
+
+//
+// # Inputs in all layouts
+//
+.form-group {
+  .help-block {
+    margin-top: layout-basics.$il-margin-xs-vertical;
+    font-size: settings.$il-font-size-small;
+  }
+
+  // TODO: Would be better to do this in elements or normalize
+  @include textfield-like-inputs {
+    border: 1px solid $input-field-border-color;
+    padding: $input-field-padding;
+  }
+
+  .radio input,
+  input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem  }
+
+  .form-control {
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+      background-color: $input-field-disabled-bg-color;
+      opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
+    }
+  }
+
+  // ## File Upload
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+    @include focus.il-focus-within-outline-only();
+
+    input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+    }
+  }
+}
+
+//
+// Hacks
+//
+
+// TODO: Fieldset reset taken over from the ILIAS core. Can be removed if elements or normalize layers do this.
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  // Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+  // so we reset that to ensure it behaves more like a standard block element.
+  // See https://github.com/twbs/bootstrap/issues/12359.
+  min-width: 0;
+}
+
+// TODO: Once we decide to refactor html templates, remove </br> in html tpl.
+.form-inline br {
+  display: none;
+}

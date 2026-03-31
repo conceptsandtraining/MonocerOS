@@ -158,15 +158,15 @@
   [data-il-ui-component="markdown-field-input"] > .c-input__field .c-field-markdown textarea,
   [data-il-ui-component="url-field-input"] .c-input__field input {
     width: 100%;
-    padding: l.$il-padding-small-vertical l.$il-padding-small-horizontal;
+    padding: l.$il-padding-xs-vertical l.$il-padding-xs-horizontal;
     font-size: $il-standard-form-font-size;
   }
   [data-il-ui-component="datetime-field-input"] .c-input__field input,
   [data-il-ui-component="numeric-field-input"] .c-input__field input {
-    padding: l.$il-padding-small-vertical l.$il-padding-small-horizontal;
+    padding: l.$il-padding-xs-vertical l.$il-padding-xs-horizontal;
     font-size: $il-standard-form-font-size;
   }
   [data-il-ui-component="select-field-input"] .c-input__field select {
-    padding: l.$il-padding-small-vertical l.$il-padding-small-horizontal;
+    padding: l.$il-padding-xs-vertical l.$il-padding-xs-horizontal;
   }
 }

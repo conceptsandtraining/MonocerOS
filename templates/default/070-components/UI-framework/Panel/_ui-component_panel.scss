@@ -12,7 +12,7 @@
 //
 //##
 
-$il-panel-style-boxed: false !default;
+$il-panel-style-boxed: true !default;
 
 //Valid for all panels (if not overridden)
 .panel,
@@ -76,6 +76,7 @@ $il-panel-style-boxed: false !default;
 //
 
 // Dashboard
+#ilContentContainer > .row > #il_center_col,
 #ilContentContainer > .row > #il_right_col {
 	[id*="block_"]:not(:first-child) {
 		margin-top: $il-margin-xlarge-vertical;
