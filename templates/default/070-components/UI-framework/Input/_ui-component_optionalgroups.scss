@@ -1,7 +1,7 @@
-@use "../../../010-settings" as s;
-@use "../../../050-layout/layout_form" as l-form;
-@use "../../../050-layout/basics" as l;
-@use "../../../050-layout/layout_breakpoints" as brk;
+@use "010-settings" as s;
+@use "050-layout/layout_form" as l-form;
+@use "050-layout/basics" as l;
+@use "050-layout/layout_breakpoints" as brk;
 
 @mixin c-input_switch-bg-hover($outline-shadow, $color) {
 	&:hover,

@@ -1,6 +1,6 @@
 @use "sass:math";
-@use "../030-tools/tool_rem-conversion" as t-rem-px;
-@use "../030-tools/tool_scale-with-ratio" as t-scale;
+@use "030-tools/tool_rem-conversion" as t-rem-px;
+@use "030-tools/tool_scale-with-ratio" as t-scale;
 
 //== Typography
 //

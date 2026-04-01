@@ -1,5 +1,5 @@
-@use "../../010-settings/" as *;
-@use "../../050-layout/basics/" as l;
+@use "010-settings" as *;
+@use "050-layout/basics/" as l;
 
 $alert-padding: l.$il-padding-large-vertical l.$il-padding-large-horizontal;
 $alert-border-radius: $il-border-radius-large;

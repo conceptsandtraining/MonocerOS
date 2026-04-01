@@ -1,6 +1,6 @@
-@use "../../../010-settings/" as *;
-@use "../../../050-layout/basics" as *;
-@use "./_component_test_legacy.scss" as *;
+@use "010-settings" as *;
+@use "050-layout/basics" as *;
+@use "component_test_legacy.scss" as *;
 
 //== Test Assessment
 $il-test-shortlist-min-width: 200px;

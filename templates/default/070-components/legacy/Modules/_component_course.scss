@@ -1,5 +1,5 @@
-@use "../../../010-settings/" as *;
-@use "../../../030-tools/_tool_browser-prefixes" as *;
+@use "010-settings" as *;
+@use "030-tools/_tool_browser-prefixes" as *;
 
 /* Modules/Course */
 
@@ -82,7 +82,7 @@ li.smallPad {
 .ilCourseObjectiveProgressBarContainer > .progress {
 	margin: 5px 0 0;
 	border: 1px solid #bbb;
-	background-color: white;	
+	background-color: white;
 }
 
 .ilCourseObjectiveProgressBarContainer > .progress  > .progress-bar {
@@ -91,8 +91,8 @@ li.smallPad {
 
 .ilCourseObjectiveProgressBarLimit {
 	float: right;
-	position: relative; 
-	border-right: 2px dotted $il-neutral-light-color; 
+	position: relative;
+	border-right: 2px dotted $il-neutral-light-color;
 	height: 20px;
 	margin-top: -17px;
 }

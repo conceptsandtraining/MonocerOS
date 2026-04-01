@@ -1,4 +1,4 @@
-@use "../050-layout/basics/" as *;
+@use "050-layout/basics" as *;
 
 $l-bar__gap--elements: $il-margin-xs-horizontal;
 $l-bar__gap--groups: $il-margin-small-horizontal;

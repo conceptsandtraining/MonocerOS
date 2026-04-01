@@ -1,11 +1,11 @@
-@use "../../../010-settings/" as *;
-@use "../../../030-tools/_tool_buttons" as *;
-@use "../../../030-tools/_tool_browser-prefixes" as *;
-@use "../../../050-layout/basics" as *;
-@use "../../../050-layout/standardpage/layout_standardpage" as spage;
-@use "../../../050-layout/layout_grid" as l-grid;
-@use "../../../030-tools/tool_highlighted-box" as box;
-@use "../../../050-layout/layout_breakpoints" as brk;
+@use "010-settings" as *;
+@use "030-tools/_tool_buttons" as *;
+@use "030-tools/_tool_browser-prefixes" as *;
+@use "050-layout/basics" as *;
+@use "050-layout/standardpage/layout_standardpage" as spage;
+@use "050-layout/layout_grid" as l-grid;
+@use "030-tools/tool_highlighted-box" as box;
+@use "050-layout/layout_breakpoints" as brk;
 
 $table-border-color: $il-main-border-color;
 

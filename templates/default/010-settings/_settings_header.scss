@@ -1,7 +1,7 @@
-@use "./_settings_color-palette.scss" as s-color;
-@use "./settings_typography" as s-typo;
-@use "../030-tools/tool_scale-with-ratio" as t-scale;
-@use "../050-layout/basics" as l;
+@use "010-settings/settings_color-palette.scss" as s-color;
+@use "010-settings/settings_typography" as s-typo;
+@use "030-tools/tool_scale-with-ratio" as t-scale;
+@use "050-layout/basics" as l;
 
 //** header
 $il-standard-page-logo-height: t-scale.scale-with-ratio(l.$scale-ratio, 5, l.$spacing-base) !default;

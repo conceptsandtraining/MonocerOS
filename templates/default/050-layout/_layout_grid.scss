@@ -1,6 +1,6 @@
 @use "sass:math";
-@use "../050-layout/basics/" as *;
-@use "../050-layout/layout_breakpoints" as *;
+@use "050-layout/basics" as *;
+@use "050-layout/layout_breakpoints" as *;
 
 // section based on bootstrap 5 - see /templates/default/Guidelines_SCSS-Coding.md
 

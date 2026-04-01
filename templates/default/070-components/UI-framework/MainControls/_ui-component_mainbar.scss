@@ -1,11 +1,11 @@
-@use "../../../010-settings/"as *;
-@use "../../../010-settings/legacy-settings/legacy-settings_symbol" as *;
-@use "../../../030-tools/tool_focus-outline" as f;
-@use "../../../030-tools/tool_screen-reader-only" as *;
-@use "../../../030-tools/tool_multi-line-cap" as t-line-cap;
-@use "../../../050-layout/basics" as *;
-@use "../../../050-layout/standardpage/" as *;
-@use "../../../070-components/legacy/component_screen-reader-only" as *;
+@use "010-settings"as *;
+@use "010-settings/legacy-settings/legacy-settings_symbol" as *;
+@use "030-tools/tool_focus-outline" as f;
+@use "030-tools/tool_screen-reader-only" as *;
+@use "030-tools/tool_multi-line-cap" as t-line-cap;
+@use "050-layout/basics" as *;
+@use "050-layout/standardpage/" as *;
+@use "070-components/legacy/component_screen-reader-only" as *;
 
 // MAINBAR VARIABLES
 $il-mainbar-btn-padding: 0;

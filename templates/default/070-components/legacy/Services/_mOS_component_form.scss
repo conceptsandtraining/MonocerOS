@@ -1,8 +1,8 @@
-@use "../../../010-settings" as settings;
-@use "../../../010-settings/legacy-settings/legacy-settings_form" as legacy-form;
-@use "../../../050-layout/layout_breakpoints" as breakpoints;
-@use "../../../030-tools/tool_focus-outline" as focus;
-@use "../../../050-layout/basics" as layout-basics;
+@use "010-settings" as settings;
+@use "010-settings/legacy-settings/legacy-settings_form" as legacy-form;
+@use "050-layout/layout_breakpoints" as breakpoints;
+@use "030-tools/tool_focus-outline" as focus;
+@use "050-layout/basics" as layout-basics;
 
 ///
 // Refactoring of the **legacy forms** for ILIAS Essential.

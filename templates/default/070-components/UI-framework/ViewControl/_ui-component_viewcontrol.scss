@@ -1,7 +1,7 @@
-@use "../../../010-settings/" as *;
-@use "../../../050-layout/basics" as *;
-@use "../../../070-components/UI-framework/Button/ui-component_button" as *;
-@use "../../../050-layout/layout_container-query" as container-query;
+@use "010-settings" as *;
+@use "050-layout/basics" as *;
+@use "070-components/UI-framework/Button/ui-component_button" as *;
+@use "050-layout/layout_container-query" as container-query;
 
 
 //== View Control

@@ -1,5 +1,5 @@
-@use "../../../010-settings/"as *;
-@use "../../../030-tools/tool_focus-outline" as *;
+@use "010-settings"as *;
+@use "030-tools/tool_focus-outline" as *;
 
 .il-link.link-bulky {
 	text-decoration: none;
@@ -17,7 +17,7 @@
 	}
 }
 
-a[aria-disabled], 
+a[aria-disabled],
 a[aria-disabled].il-link.link-bulky:hover {
 	text-decoration: none;
 	cursor:initial;

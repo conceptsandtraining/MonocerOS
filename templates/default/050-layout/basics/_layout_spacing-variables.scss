@@ -1,5 +1,5 @@
-@use "../../030-tools/tool_rem-conversion" as t-rem;
-@use "../../030-tools/tool_scale-with-ratio" as t-scale;
+@use "030-tools/tool_rem-conversion" as t-rem;
+@use "030-tools/tool_scale-with-ratio" as t-scale;
 
 $_vertical-to-horizontal-ratio: 1.333;
 $scale-ratio: 1.333;

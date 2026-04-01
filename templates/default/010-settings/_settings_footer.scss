@@ -1,4 +1,4 @@
-@use "./_settings_color-palette.scss" as s-color;
+@use "010-settings/settings_color-palette.scss" as s-color;
 
 //** footer
 $il-footer-link-hover-color: s-color.$il-link-hover-color !default;

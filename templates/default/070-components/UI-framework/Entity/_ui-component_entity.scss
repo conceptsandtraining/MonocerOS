@@ -1,6 +1,6 @@
 @use "sass:math";
-@use "../../../010-settings/" as s;
-@use "../../../050-layout/basics/" as l;
+@use "010-settings" as s;
+@use "050-layout/basics/" as l;
 
 .c-entity {
     &.__container {

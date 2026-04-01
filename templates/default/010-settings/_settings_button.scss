@@ -1,8 +1,8 @@
-@use "./_settings_color-palette.scss" as s-color;
-@use "./_settings_typography.scss" as s-typo;
-@use "./settings_borders" as s-border;
-@use "../050-layout/basics" as l;
-@use "./legacy-settings/legacy-settings_form" as s-form;
+@use "010-settings/settings_color-palette.scss" as s-color;
+@use "010-settings/settings_typography.scss" as s-typo;
+@use "010-settings/settings_borders" as s-border;
+@use "050-layout/basics" as l;
+@use "010-settings/legacy-settings/legacy-settings_form" as s-form;
 
 //== Buttons
 //

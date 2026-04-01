@@ -1,5 +1,5 @@
-@use "../../../010-settings" as s;
-@use "../../../050-layout/basics" as l;
+@use "010-settings" as s;
+@use "050-layout/basics" as l;
 
 .c-form .c-input[data-il-ui-component="section-field-input"].c-input {
   margin-bottom: l.$il-margin-xlarge-vertical * 2;

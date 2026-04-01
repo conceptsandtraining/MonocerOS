@@ -1,6 +1,6 @@
-@use "../../../../010-settings/" as *;
-@use "../../../../030-tools/tool_focus-outline" as focus;
-@use "../../../../050-layout/basics" as *;
+@use "010-settings" as *;
+@use "030-tools/tool_focus-outline" as focus;
+@use "050-layout/basics" as *;
 
 $nav-tabs-active-link-hover-bg: $il-text-color !default;
 $nav-tabs-active-link-hover-color: $il-text-color-invert !default;

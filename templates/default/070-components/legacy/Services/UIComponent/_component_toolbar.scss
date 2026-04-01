@@ -1,12 +1,12 @@
 @use "sass:math";
-@use "../../../../010-settings/" as *;
-@use "../../../../030-tools/tool_focus-outline" as *;
-@use "../../../../030-tools/tool_clearfix" as *;
-@use "../../../../030-tools/legacy-bootstrap-mixins/nav-divider" as *;
-@use "../../../../030-tools/_tool_border-radius" as *;
-@use "../../../../030-tools/_tool_browser-prefixes" as *;
-@use "../../../../050-layout/layout_element-bar" as ebar;
-@use "../../../../050-layout/basics" as *;
+@use "010-settings" as *;
+@use "030-tools/tool_focus-outline" as *;
+@use "030-tools/tool_clearfix" as *;
+@use "030-tools/legacy-bootstrap-mixins/nav-divider" as *;
+@use "030-tools/_tool_border-radius" as *;
+@use "030-tools/_tool_browser-prefixes" as *;
+@use "050-layout/layout_element-bar" as ebar;
+@use "050-layout/basics" as *;
 
 /* Services/UIComponent/Toolbar */
 

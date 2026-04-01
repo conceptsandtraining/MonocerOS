@@ -1,4 +1,4 @@
-@use "../../../010-settings/" as *;
+@use "010-settings" as *;
 
 [data-onscreenchat-inact-userid] {
 	opacity: .3 !important;
@@ -233,7 +233,7 @@
 					height: 16px;
 					vertical-align: sub;
 				}
-				
+
 				a.glyph {
 					vertical-align: middle;
 				}

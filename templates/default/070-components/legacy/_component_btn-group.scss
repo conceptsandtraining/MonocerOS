@@ -1,10 +1,10 @@
-@use "../../010-settings/" as *;
-@use "../../030-tools/tool_clearfix" as *;
-@use "../../030-tools/_tool_border-radius" as *;
-@use "../../030-tools/_tool_browser-prefixes" as *;
-@use "../../030-tools/_tool_border-radius" as *;
-@use "../../070-components/UI-framework/Button/ui-component_button" as c-btns;
-@use "../../030-tools/tool_focus-outline" as f;
+@use "010-settings" as *;
+@use "030-tools/tool_clearfix" as *;
+@use "030-tools/_tool_border-radius" as *;
+@use "030-tools/_tool_browser-prefixes" as *;
+@use "030-tools/_tool_border-radius" as *;
+@use "070-components/UI-framework/Button/ui-component_button" as c-btns;
+@use "030-tools/tool_focus-outline" as f;
 
 // section based on bootstrap 3 - see /templates/default/Guidelines_SCSS-Coding.md
 

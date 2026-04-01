@@ -2,8 +2,8 @@
 @use "sass:math";
 @use "sass:color";
 @use "sass:string";
-@use "../030-tools/tool_contrast-color" as contrast-col;
-@use "../030-tools/tool_focus-outline" as focus;
+@use "030-tools/tool_contrast-color" as contrast-col;
+@use "030-tools/tool_focus-outline" as focus;
 
 $debug-mode: false !default;
 

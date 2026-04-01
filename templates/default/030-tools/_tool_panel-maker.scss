@@ -1,8 +1,8 @@
-@use "../010-settings" as settings;
-@use "../010-settings/legacy-settings/legacy-settings_panel" as ls;
-@use "../030-tools/_tool_border-radius" as t-brad;
-@use "../030-tools/tool_clearfix" as clearfix;
-@use "../050-layout/basics" as layout-basics;
+@use "010-settings" as settings;
+@use "010-settings/legacy-settings/legacy-settings_panel" as ls;
+@use "030-tools/_tool_border-radius" as t-brad;
+@use "030-tools/tool_clearfix" as clearfix;
+@use "050-layout/basics" as layout-basics;
 
 $panel-boxed-heading-padding: ls.$il-panel-heading-padding;
 $panel-boxed-body-padding-vertical: ls.$il-panel-body-padding-vertical;

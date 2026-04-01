@@ -1,9 +1,9 @@
 @use "sass:math";
 
-@use "../../../../010-settings/" as *;
-@use "../../../../010-settings/legacy-settings/legacy-settings_symbol" as *;
-@use "../../../../050-layout/basics/" as *;
-@use "../../../../050-layout/standardpage/" as *;
+@use "010-settings" as *;
+@use "010-settings/legacy-settings/legacy-settings_symbol" as *;
+@use "050-layout/basics/" as *;
+@use "050-layout/standardpage/" as *;
 
 $il-slate-bulky-level2-bg-color: $il-main-dark-bg;
 $il-slate-tree-padding: $il-padding-small-vertical 0;

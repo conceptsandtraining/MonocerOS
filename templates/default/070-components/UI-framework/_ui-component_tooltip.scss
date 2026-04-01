@@ -1,6 +1,6 @@
-@use "../../010-settings/" as *;
-@use "../../030-tools/tool_typography-mixins" as tool-typography;
-@use "../../050-layout/basics/" as *;
+@use "010-settings" as *;
+@use "030-tools/tool_typography-mixins" as tool-typography;
+@use "050-layout/basics/" as *;
 
 $c-tooltip-max-width: 50vw;
 $c-tooltip-max-height: 40vh;

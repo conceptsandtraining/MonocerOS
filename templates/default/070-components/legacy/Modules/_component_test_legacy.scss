@@ -1,6 +1,6 @@
-@use "../../../010-settings/" as *;
-@use "../../../050-layout/basics/_layout_spacing-variables"as *;
-@use "../../../070-components/legacy/component_alert" as alert;
+@use "010-settings" as *;
+@use "050-layout/basics/_layout_spacing-variables"as *;
+@use "070-components/legacy/component_alert" as alert;
 
 /* not yet refactored code from former ta.css */
 $il-test-dropzone-bg-color: $il-main-dark-bg;

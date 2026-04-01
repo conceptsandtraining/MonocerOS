@@ -6,8 +6,8 @@
 // Most normalizing is done by Bootstrap.
 // Elements that are heavily styled and overwritten on lower layers anyway SHOULD NOT be normalized.
 
-@use "./normalize_print";
-@use "./normalize_typography";
-@use "./normalize_input";
-@use "./normalize_structure";
-@use "./normalize_table";
+@use "normalize_print";
+@use "normalize_typography";
+@use "normalize_input";
+@use "normalize_structure";
+@use "normalize_table";

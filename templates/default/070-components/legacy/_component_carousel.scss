@@ -1,9 +1,9 @@
 @use "sass:math";
-@use "../../010-settings/" as *;
-@use "../../030-tools/tool_clearfix" as *;
-@use "../../030-tools/tool_browser-prefixes" as *;
-@use "../../050-layout/layout_responsive-img" as *;
-@use "../../050-layout/layout_breakpoints" as *;
+@use "010-settings" as *;
+@use "030-tools/tool_clearfix" as *;
+@use "030-tools/tool_browser-prefixes" as *;
+@use "050-layout/layout_responsive-img" as *;
+@use "050-layout/layout_breakpoints" as *;
 
 $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6) !default;
 
@@ -25,7 +25,7 @@ $carousel-inner-padding:                      0px 24px !default;
 .carousel {
     position: relative;
   }
-  
+
   .carousel-inner {
     position: relative;
     overflow: hidden;
@@ -40,12 +40,12 @@ $carousel-inner-padding:                      0px 24px !default;
             .item:not(.text-only) .item-content.item-vertical {
         flex-direction: column;
     }
-  
+
     > .item {
       display: none;
       position: relative;
       @include transition(.6s ease-in-out left);
-  
+
       // Account for jankitude on images
       > img,
       > a > img,
@@ -54,13 +54,13 @@ $carousel-inner-padding:                      0px 24px !default;
         @include img-responsive;
         line-height: 1;
       }
-  
+
       // WebKit CSS3 transforms for supported devices
       @media all and (transform-3d), (-webkit-transform-3d) {
         @include transition-transform(0.6s ease-in-out);
         @include backface-visibility(hidden);
         @include perspective(1000px);
-  
+
         &.next,
         &.active.right {
           @include translate3d(100%, 0, 0);
@@ -82,24 +82,24 @@ $carousel-inner-padding:                      0px 24px !default;
         }
       }
     }
-  
+
     > .active,
     > .next,
     > .prev {
       display: block;
     }
-  
+
     > .active {
       left: 0;
     }
-  
+
     > .next,
     > .prev {
       position: absolute;
       top: 0;
       width: 100%;
     }
-  
+
     > .next {
       left: 100%;
     }
@@ -110,19 +110,19 @@ $carousel-inner-padding:                      0px 24px !default;
     > .prev.right {
       left: 0;
     }
-  
+
     > .active.left {
       left: -100%;
     }
     > .active.right {
       left: 100%;
     }
-  
+
   }
-  
+
   // Left/right controls for nav
   // ---------------------------
-  
+
   .carousel-control {
     position: absolute;
     top: 0;
@@ -137,7 +137,7 @@ $carousel-inner-padding:                      0px 24px !default;
     background-color: rgba(0, 0, 0, 0); // Fix IE9 click-thru bug
     // We can't have this transition here because WebKit cancels the carousel
     // animation if you trip this while in the middle of another animation.
-  
+
     // Set gradients for backgrounds
     &.left {
       // @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
@@ -147,7 +147,7 @@ $carousel-inner-padding:                      0px 24px !default;
       right: 0;
       // @include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
     }
-  
+
     // Hover/focus state
     &:hover,
     &:focus {
@@ -156,7 +156,7 @@ $carousel-inner-padding:                      0px 24px !default;
       text-decoration: none;
       @include opacity(.9);
     }
-  
+
     // Toggles
     .icon-prev,
     .icon-next,
@@ -185,8 +185,8 @@ $carousel-inner-padding:                      0px 24px !default;
       line-height: 1;
       font-family: serif;
     }
-  
-  
+
+
     .icon-prev {
       &:before {
         content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
@@ -198,12 +198,12 @@ $carousel-inner-padding:                      0px 24px !default;
       }
     }
   }
-  
+
   // Optional indicator pips
   //
   // Add an unordered list with the following class and add a list item for each
   // slide your carousel holds.
-  
+
   .carousel-indicators {
     position: absolute;
     bottom: 10px;
@@ -214,7 +214,7 @@ $carousel-inner-padding:                      0px 24px !default;
     padding-left: 0;
     list-style: none;
     text-align: center;
-  
+
     li {
       display: inline-block;
       width:  10px;
@@ -233,7 +233,7 @@ $carousel-inner-padding:                      0px 24px !default;
       background-color: $carousel-indicator-active-bg;
     }
   }
-  
+
   // Optional captions
   // -----------------------------
   // Hidden by default for smaller viewports
@@ -252,11 +252,11 @@ $carousel-inner-padding:                      0px 24px !default;
       text-shadow: none; // No shadow for button elements in carousel-caption
     }
   }
-  
-  
+
+
   // Scale up controls for tablets and up
   @media screen and (min-width: $screen-sm-min) {
-  
+
     // Scale up the controls a smidge
     .carousel-control {
       .glyphicon-chevron-left,
@@ -277,14 +277,14 @@ $carousel-inner-padding:                      0px 24px !default;
         margin-right: math.div($carousel-control-font-size, -2);
       }
     }
-  
+
     // Show and left align the captions
     .carousel-caption {
       left: 20%;
       right: 20%;
       padding-bottom: 30px;
     }
-  
+
     // Move up the indicators
     .carousel-indicators {
       bottom: 20px;
@@ -314,14 +314,14 @@ $carousel-inner-padding:                      0px 24px !default;
         margin-right: math.div($carousel-control-font-size, -2);
       }
     }
-  
+
     // Show and left align the captions
     .carousel-caption {
       left: 20%;
       right: 20%;
       padding-bottom: 30px;
     }
-  
+
     // Move up the indicators
     .carousel-indicators {
       bottom: 20px;

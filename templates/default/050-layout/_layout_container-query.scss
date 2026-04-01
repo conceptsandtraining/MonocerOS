@@ -5,7 +5,7 @@
 ////
 
 @use "sass:map";
-@use "../050-layout/standardpage/" as l;
+@use "050-layout/standardpage" as l;
 
 /// List of allowed container queries and the width below which the layout should break to a compact design.
 /// @type Map

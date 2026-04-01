@@ -10,34 +10,34 @@
 @use 'sass:list';
 
 /// ### ILIAS modules
-@use "../../../010-settings" as *;
-@use "../../../010-settings/legacy-settings/legacy-settings_form" as *;
+@use "010-settings" as *;
+@use "010-settings/legacy-settings/legacy-settings_form" as *;
 
-@use "../../../030-tools/tool_focus-outline" as *;
-@use "../../../030-tools/tool_rem-conversion" as *;
-@use "../../../030-tools/_tool_browser-prefixes" as *;
+@use "030-tools/tool_focus-outline" as *;
+@use "030-tools/tool_rem-conversion" as *;
+@use "030-tools/_tool_browser-prefixes" as *;
 
-@use "../../../050-layout/basics" as *;
-@use "../../../050-layout/layout_form" as l-form;
-@use "../../../050-layout/layout_breakpoints" as brk;
-@use "../../../050-layout/basics" as l;
+@use "050-layout/basics" as *;
+@use "050-layout/layout_form" as l-form;
+@use "050-layout/layout_breakpoints" as brk;
+@use "050-layout/basics" as l;
 
 //== Specific Inputs
 //
 //
-@use "_ui-component_tag.scss";
-@use "_ui-component_password.scss";
-@use "_ui-component_radio.scss";
-@use "_ui-component_multiselect.scss";
-@use "_ui-component_textarea.scss";
-@use "_ui-component_filter.scss";
-@use "_ui-component_duration.scss";
-@use "_ui-component_file.scss";
-@use "_ui-component_markdown.scss";
-@use "_ui-component_rating.scss";
+@use "ui-component_tag";
+@use "ui-component_password";
+@use "ui-component_radio";
+@use "ui-component_multiselect";
+@use "ui-component_textarea";
+@use "ui-component_filter";
+@use "ui-component_duration";
+@use "ui-component_file";
+@use "ui-component_markdown";
+@use "ui-component_rating";
 @use "ui-component_section";
-@use "_ui-component_numeric.scss";
-@use "_ui-component_optionalgroups.scss";
+@use "ui-component_numeric";
+@use "ui-component_optionalgroups";
 
 
 /// general form container styling

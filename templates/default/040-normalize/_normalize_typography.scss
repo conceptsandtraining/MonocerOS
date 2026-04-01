@@ -1,4 +1,5 @@
-@use "../010-settings/" as *;
+@use "010-settings" as *;
+
 /* atkinson-hyperlegible-next-regular - latin */
 @font-face {
 	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

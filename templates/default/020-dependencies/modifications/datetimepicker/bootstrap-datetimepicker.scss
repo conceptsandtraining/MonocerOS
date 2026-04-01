@@ -1,7 +1,7 @@
-@use "../../../010-settings/" as *;
-@use "../../../030-tools/_tool_browser-prefixes" as *;
-@use "../../../030-tools/tool_screen-reader-only" as *;
-@use "../../../050-layout/layout_breakpoints" as *;
+@use "010-settings" as *;
+@use "030-tools/_tool_browser-prefixes" as *;
+@use "030-tools/tool_screen-reader-only" as *;
+@use "050-layout/layout_breakpoints" as *;
 
 /*!
  * Datetimepicker for Bootstrap 3
@@ -20,7 +20,7 @@
  $bs-datetimepicker-secondary-border-color-rgba: rgba(0, 0, 0, 0.2);
  $bs-datetimepicker-primary-border-color: white;
  $bs-datetimepicker-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
- 
+
 
 .bootstrap-datetimepicker-widget {
     list-style: none;
@@ -345,7 +345,7 @@
             line-height: 27px;
         }
     }
-	
+
 	&.wider {
 		width: 21em;
 	}
