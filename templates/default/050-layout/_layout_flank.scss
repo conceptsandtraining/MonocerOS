@@ -1,0 +1,57 @@
+@use "050-layout/basics" as layout-basics;
+@use "050-layout/layout_breakpoints" as break;
+
+///
+// Tool puts a smaller, flanking item (e.g. icon, thumbnail) next to a stretching item that takes the remaining width.
+// Breaks up the elements into two stretching items if both cannot fit into the same row.
+// @group layout-tool
+// @author Ferdinand Engländer <ferdinand.englaender@concepts-and-training.de>
+///
+
+///
+// # Interface
+///
+
+/// gap between flanking and stretching item
+$flank-gap: layout-basics.$il-margin-small-horizontal !default;
+
+/// Change here to set default width for all flanking items created by this import of the tool.
+/// Default is `auto` so the elements within decide the size instead.
+/// Alternatively, you MAY change the size for each call of make-flanking-child($width).
+$flanking-width: auto !default;
+
+///
+// # Mandatory Tool Calls
+///
+
+/// MUST have exactly two children created with the child-mixins - more and less are not supported
+@mixin make-flank-container() {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $flank-gap;
+}
+
+/// takes the remaining available width
+/// MUST NOT be display: inline or similar
+@mixin make-stretching-child() {
+  flex-grow: 999; // always stretch up to the flanking item
+}
+
+/// MAY be on the left or right depending on if it is being placed before or after stretching item.
+/// MUST NOT be display: inline or similar
+@mixin make-flanking-child($width: $flanking-width) {
+  flex-basis: $width;
+  flex-grow: 1; // so it stretches to full-width when breaking into a new line, allows thumbnails to go full-width
+}
+
+///
+// # Optional Tool Calls
+///
+
+/// MAY be added after make-flank-container()
+@mixin make-flank-container-break-on-small-screens() {
+  @include break.on-screen-size("small") {
+    display: block;
+  }
+}
