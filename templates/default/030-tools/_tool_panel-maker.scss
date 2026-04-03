@@ -1,12 +1,17 @@
 @use "010-settings" as settings;
 @use "010-settings/legacy-settings/legacy-settings_panel" as ls;
+@use "030-tools/tool_bordered-box" as bordered-box;
 @use "030-tools/_tool_border-radius" as t-brad;
 @use "030-tools/tool_clearfix" as clearfix;
 @use "050-layout/basics" as layout-basics;
 
-$panel-boxed-heading-padding: ls.$il-panel-heading-padding;
-$panel-boxed-body-padding-vertical: ls.$il-panel-body-padding-vertical;
-$panel-boxed-body-padding-horizontal: ls.$il-panel-body-padding-horizontal;
+$panel-boxed-heading-padding: ls.$il-panel-heading-padding !default;
+$panel-boxed-body-padding-vertical: ls.$il-panel-body-padding-vertical !default;
+$panel-boxed-body-padding-horizontal: ls.$il-panel-body-padding-horizontal !default;
+$panel-bg: settings.$il-main-bg !default;
+$panel-border: ls.$il-panel-border !default;
+$panel-border-radius: ls.$il-panel-border-radius;
+$panel-shadow: ls.$il-panel-shadow !default;
 
 @mixin make-panel-container($is-boxed: true) {
   // one panel after another
@@ -15,32 +20,23 @@ $panel-boxed-body-padding-horizontal: ls.$il-panel-body-padding-horizontal;
   }
 
   @if $is-boxed {
-    border: ls.$il-panel-border;
-    border-radius: ls.$il-panel-border-radius;
-    -webkit-box-shadow: ls.$il-panel-shadow;
-    box-shadow: ls.$il-panel-shadow;
-  }
-}
-
-@mixin make-sub-panel($is-boxed: true) {
-    @if $is-boxed {
-      border: none;
-      border-radius: 0;
-      margin: -#{$panel-boxed-body-padding-vertical} -#{$panel-boxed-body-padding-horizontal};
-      &:not(:first-child) {
-        margin-top: 0;
-      }
-      &:not(:last-child) {
-        margin-bottom: 0;
-      }
+    @include bordered-box.make-box(
+            $box-border: $panel-border,
+            $box-border-radius: $panel-border-radius,
+            $box-shadow: $panel-shadow,
+            $melt-top-border-with-box-above: false,
+    );
   }
 }
 
 @mixin make-panel-header($is-boxed: true, $has-flex-items: true) {
   @if $is-boxed {
-    padding: $panel-boxed-heading-padding;
-    background-color: settings.$il-main-dark-bg;
-    @include t-brad.border-top-radius(ls.$il-panel-border-radius);
+    @include bordered-box.make-inner-section(
+                    $panel-boxed-body-padding-vertical,
+                    $panel-boxed-body-padding-horizontal,
+                    $panel-border-radius,
+                    $highlight-color: settings.$il-main-dark-bg,
+    );
     h1, h2, h3, h4, h5 {
       margin: 0;
     }
@@ -49,11 +45,33 @@ $panel-boxed-body-padding-horizontal: ls.$il-panel-body-padding-horizontal;
   }
 }
 
-
 @mixin make-panel-body($is-boxed: true) {
-  @include clearfix.clearfix();
   @if $is-boxed {
-    padding: $panel-boxed-body-padding-vertical $panel-boxed-body-padding-horizontal;
-    background-color: settings.$il-main-bg;
+    @include bordered-box.make-inner-section(
+                    $panel-boxed-body-padding-vertical,
+                    $panel-boxed-body-padding-horizontal,
+                    $panel-border-radius,
+                    $panel-bg,
+    );
+  }
+}
+
+/// must be inside panel body
+@mixin make-sub-panel($is-boxed: true) {
+  @if $is-boxed {
+    // remove styling if in case it already is a panel
+    border: none;
+    border-radius: 0;
+    // treat like a breakout section because it is probably located inside panel-header
+    @include bordered-box.break-element-out-of-section(
+            $panel-boxed-body-padding-vertical,
+            $panel-boxed-body-padding-horizontal,
+    );
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

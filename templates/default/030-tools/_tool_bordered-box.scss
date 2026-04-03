@@ -1,0 +1,105 @@
+@use "010-settings" as settings;
+@use "010-settings/legacy-settings/legacy-settings_panel" as ls;
+@use "030-tools/tool_border-radius" as border-radius;
+@use "050-layout/basics" as layout-basics;
+
+///
+// Create boxes with border, box-shadow, padded inner section and nested full-width breakout sections.
+// Manages the border radius of inner sections and can remove double borders and border radius
+// of boxes touching vertically.
+// @author Ferdinand Engländer <ferdinand.englaender@concepts-and-training.de>
+///
+
+///
+/// # Interface
+///
+
+/// @type List
+$box-border: ls.$il-panel-border !default;
+/// can be counteracted by make-section-breakout()
+$section-padding-vertical: ls.$il-panel-body-padding-vertical;
+/// can be counteracted by make-section-breakout()
+$section-padding-horizontal: ls.$il-panel-body-padding-horizontal;
+/// @type Number
+$box-border-radius: ls.$il-panel-border-radius !default;
+/// @type List
+$box-shadow: ls.$il-panel-shadow !default;
+/// @type Color
+$box-bg: settings.$il-main-bg;
+
+///
+/// # Mandatory Tool Calls
+///
+
+/// Apply to the bordered box
+/// SHOULD have at least one and only divs with make-inner-section()
+/// @param Bool $melt-top-border-with-box-above - merges boxes by removing double borders & adjacent border-radius
+/// @example html
+///    <div class="my-box">
+///      <div class="box-content">Hello World!</div>
+///    </div>
+/// @example scss
+///    .my-box {
+///      @include make-box();
+///      .box-content {
+///        @include make-inner-section();
+///      }
+///    }
+@mixin make-box(
+  $box-border: $box-border,
+  $box-border-radius: $box-border-radius,
+  $box-shadow: $box-shadow,
+  $melt-top-border-with-box-above: false,
+) {
+  border: $box-border;
+  border-radius: $box-border-radius;
+  -webkit-box-shadow: $box-border-radius;
+  box-shadow: $box-shadow;
+  @if $melt-top-border-with-box-above {
+    &:has(+ &) {
+      // remove bottom border radius if there is a box to melt into below
+      @include border-radius.border-bottom-radius(0);
+    }
+    & + & {
+      border-top: none;
+      border-radius: 0; // remove border radius for any middle boxes
+      &:last-of-type {
+        // add the bottom border radius again for the last box
+        @include border-radius.border-bottom-radius($box-border-radius);
+      }
+    }
+  }
+}
+
+/// For any content section inside the bordered box
+@mixin make-inner-section(
+  $section-padding-vertical: $section-padding-vertical,
+  $section-padding-horizontal: $section-padding-horizontal,
+  $box-border-radius: $box-border-radius,
+  $box-bg: $box-bg,
+  $highlight-color: null
+) {
+  padding: $section-padding-vertical $section-padding-horizontal;
+  background-color: if($highlight-color, $highlight-color, $box-bg);
+  border-radius: 0;
+  &:first-child {
+    @include border-radius.border-top-radius($box-border-radius)
+  }
+  &:last-child {
+    @include border-radius.border-bottom-radius($box-border-radius)
+  }
+  &:only-child {
+    border-radius: $box-border-radius;
+  }
+}
+
+///
+/// # Optional Tool Calls
+///
+
+/// meant for elements nested in an inner section, counteracts the section padding to reach full-width inside the box
+/// @param Number $vertical-breakout - the vertical padding of the surrounding section
+/// @param Number $horizontal-breakout - the horizontal padding of the surrounding section
+@mixin break-element-out-of-section($vertical-breakout, $horizontal-breakout) {
+  margin: -#{$vertical-breakout} -#{$horizontal-breakout};
+}
