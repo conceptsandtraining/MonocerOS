@@ -1,18 +1,41 @@
-@use "010-settings" as *;
-@use "010-settings/legacy-settings/legacy-settings_symbol" as *;
+@use "010-settings" as settings;
+@use "010-settings/legacy-settings/legacy-settings_symbol" as symbol;
 @use "010-settings/legacy-settings/legacy-settings_panel" as *;
-@use "050-layout/basics" as *;
+@use "050-layout/basics" as basic-layout;
 
+$container-icon-size: symbol.$il-icon-size-large !default;
+$container-top-edge-padding: basic-layout.$il-padding-medium-vertical !default;
+$container-inner-gap: basic-layout.$il-margin-large-horizontal !default;
+$container-inner-padding: basic-layout.$il-padding-medium-vertical basic-layout.$il-padding-medium-horizontal !default;
 
-/* Services/Container */
-div.il_Preconditions {
-	padding: 10px 0 0;
+.ilContainerListItemOuter {
+  display: grid;
+  grid-template-areas: "icon body";
+  grid-template-columns: $container-icon-size 1fr;
+  gap: basic-layout.$il-margin-large-horizontal;
+  .ilContainerListItemIcon {
+    grid-area: icon;
+  }
 }
 
-div.il_PreconditionsTitel {
-	margin-top: 3px;
-	text-align: left;
-	font-size: $il-font-size-small;
+.il_ContainerListItem {
+  display: grid;
+  grid-template-areas: "title dropdown";
+  grid-template-columns: 1fr max-content;
+  grid-area: body;
+
+  .il_ContainerItemTitle {
+    grid-area: title;
+    margin-top: 0;
+  }
+
+  .ilFloatRight {
+    grid-area: dropdown;
+  }
+
+  .ilListItemSection {
+    grid-column: 1/2;
+  }
 }
 
 div.ilPreconditionItem {
@@ -221,4 +244,11 @@ div#ilContRepIntro img {
 }
 .il_ContainerItemTitle .btn {
 	font-size: $il-font-size-large;
+
+.ilObjListRow {
+  padding: $container-inner-padding;
+  &:hover {
+    background-color: settings.$il-main-dark-bg;
+  }
+
 }

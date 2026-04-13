@@ -142,87 +142,17 @@ td.boxed {
    border: 1px solid black;
 }
 
-/*Link, Visited, Hover, Focus, Activ*/
-a.il_ContainerItemCommand2:link, a.il_ContainerItemCommand2:visited,
-a.il_ContainerItemCommand:link, a.il_ContainerItemCommand:visited {
-   font-size: $il-font-size-small;
-   text-decoration: none;
-   margin: 0 3px 0 0;
-   white-space: nowrap;
-   font-weight: $il-font-weight-base;
-}
-
-a.il_ContainerItemCommand2:hover,
-a.il_ContainerItemCommand:hover {
-   text-decoration: underline;
-}
-
-div.il_ContainerItemCommands2 {
-   text-align: right;
-   margin: 0 3px 3px;
-}
-
-div.il_ContainerItemCommands {
-   padding: 2px 0;
-}
-
-h3.il_ContainerItemTitle {
-   padding: 0;
-   margin: 0;
-   font-weight: $il-font-weight-base;
-   font-size: $il-font-size-large;
-   display: inline;
-}
-
-div.il_ContainerItemTitle {
-   float: left;
-   max-width: calc(unquote("100% - 40px"));
-   padding-bottom: 5px;
-}
-
-div.il_ItemProperties {
-   margin: 2px 0 5px;
-   text-align: left;
-   font-weight: $il-font-weight-base;
-   font-size: $il-font-size-small;
-}
-
-div.il_ItemNotice {
-   margin: 2px 0 5px;
-   text-align: left;
-   font-weight: $il-font-weight-base;
-   font-size: $il-font-size-small;
-   color: green;
-}
-
-a.il_ItemProperty:link, a.il_ItemProperty:visited {
-   text-decoration: none;
-   font-weight: $il-font-weight-base;
-}
-
-a.il_ItemProperty:hover {
-   color: black;
-   text-decoration: underline;
-}
-
-
-
 /* Table Links */
 /* --- description text ---*/
-div.il_Description, td.il_Description {
+td.il_Description {
    margin: 2px 0 5px;
    font-size: $il-font-size-small;
    font-weight: $il-font-weight-base;
    text-align: left;
 }
 
-div.il_Description_no_margin, td.il_Description_no_margin {
+td.il_Description_no_margin {
    font-size: $il-font-size-small;
    font-style: italic;
-   text-align: left;
-}
-
-div.il_info {
-   font-size: $il-font-size-small;
    text-align: left;
 }

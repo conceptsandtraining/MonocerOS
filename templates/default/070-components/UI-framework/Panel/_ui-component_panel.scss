@@ -13,27 +13,21 @@
 //##
 
 $il-panel-style-boxed: true !default;
+$make-legacy-blocks-into-panels: true !default;
 
 //Valid for all panels (if not overridden)
-.panel,
-// legacy panel
-.ilContainerBlock  {
+.panel {
 	@include panel.make-panel-container($il-panel-style-boxed);
-
-	.panel-heading,
-	.ilContainerBlockHeader:not(.ilHeader) {
+	.panel-heading {
 		@include panel.make-panel-header($il-panel-style-boxed);
 	}
-
 	.panel-body {
 		@include panel.make-panel-body($il-panel-style-boxed);
-
 		.panel-sub,
 		> .il-item-group {
 			@include panel.make-sub-panel($il-panel-style-boxed);
 		}
 	}
-
 	.panel-footer {
 		@if($il-panel-style-boxed) {
 			padding: ls.$il-panel-footer-padding;
@@ -41,6 +35,17 @@ $il-panel-style-boxed: true !default;
 			@include border-bottom-radius((ls.$il-panel-border-radius - 1));
 		}
 	}
+}
+
+// Legacy Object Blocks
+@if $make-legacy-blocks-into-panels {
+	.ilContainerBlock  {
+		@include panel.make-panel-container($il-panel-style-boxed);
+		.ilContainerBlockHeader:not(.ilHeader) {
+			@include panel.make-panel-header($il-panel-style-boxed);
+		}
+	}
+
 }
 
 //Special assignments for Panels using Flex layouts (Standard, Secondary, Report and Sub)
