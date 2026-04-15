@@ -40,12 +40,15 @@ $make-legacy-blocks-into-panels: true !default;
 // Legacy Object Blocks
 @if $make-legacy-blocks-into-panels {
 	.ilContainerBlock  {
-		@include panel.make-panel-container($il-panel-style-boxed);
+		@include panel.make-panel-container();
 		.ilContainerBlockHeader:not(.ilHeader) {
-			@include panel.make-panel-header($il-panel-style-boxed);
+			@include panel.make-panel-header();
 		}
 	}
-
+} @else {
+	.ilContainerBlockHeader:not(.ilHeader) {
+		margin-bottom: $il-margin-medium-vertical;
+	}
 }
 
 //Special assignments for Panels using Flex layouts (Standard, Secondary, Report and Sub)
