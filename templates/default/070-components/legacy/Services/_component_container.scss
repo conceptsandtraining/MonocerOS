@@ -10,11 +10,24 @@ $container-inner-padding: basic-layout.$il-padding-medium-vertical basic-layout.
 
 .ilContainerListItemOuter {
   display: grid;
-  grid-template-areas: "icon body";
-  grid-template-columns: $container-icon-size 1fr;
-  gap: basic-layout.$il-margin-large-horizontal;
+  grid-template-areas: "checkbox icon body";
+  grid-template-columns: max-content auto 1fr;
+
   .ilContainerListItemIcon {
     grid-area: icon;
+
+    .ilListItemIcon {
+      width: $container-icon-size;
+      margin-inline-end: basic-layout.$il-margin-small-horizontal;
+    }
+  }
+  .ilContainerListItemCB {
+    grid-area: checkbox;
+    align-self: center;
+    margin-inline-end: basic-layout.$il-margin-small-horizontal;
+  }
+  .ilContainerListItemContent {
+    grid-area: body;
   }
 }
 
@@ -22,7 +35,6 @@ $container-inner-padding: basic-layout.$il-padding-medium-vertical basic-layout.
   display: grid;
   grid-template-areas: "title dropdown";
   grid-template-columns: 1fr max-content;
-  grid-area: body;
 
   .il_ContainerItemTitle {
     grid-area: title;
@@ -251,4 +263,22 @@ div#ilContRepIntro img {
     background-color: settings.$il-main-dark-bg;
   }
 
+}
+
+// select all control in manage view
+// TODO: Should be neither a tablefooter nor a row. Change in html template eventually!
+.tblfooter.row.ilContainerListFooter {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  border-top: $il-panel-border;
+  margin: 0;
+  padding: $container-inner-padding;
+  background: none;
+  > * {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
 }
