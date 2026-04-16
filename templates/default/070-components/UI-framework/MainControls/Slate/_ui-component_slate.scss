@@ -2,8 +2,8 @@
 
 @use "010-settings" as *;
 @use "010-settings/legacy-settings/legacy-settings_symbol" as *;
-@use "050-layout/basics/" as *;
-@use "050-layout/standardpage/" as *;
+@use "050-layout/basics" as *;
+@use "050-layout/standardpage" as *;
 
 $il-slate-bulky-level2-bg-color: $il-main-dark-bg;
 $il-slate-tree-padding: $il-padding-small-vertical 0;
@@ -16,6 +16,12 @@ $il-slate-tree-padding: $il-padding-small-vertical 0;
 	.link-bulky {
 		// see general styling in button component
 		// this styling is for expandable entries
+		&.engaged {
+			background-color: $il-slate-bulky-level2-bg-color;
+			border-color: $il-slate-bulky-level2-bg-color;
+			border-top: $il-main-border;
+			margin-bottom: 0;
+		}
 		&.engaged::after,
 		&.disengaged::after {
 				font-family: "il-icons";
@@ -97,19 +103,26 @@ $il-slate-tree-padding: $il-padding-small-vertical 0;
 .il-maincontrols-slate.engaged {
 	&[data-depth-level="2"] {
 		.btn-bulky:not(:hover),
-		.link-bulky:not(:hover) {
+		.link-bulky:not(:hover),
+		.ilExplorerContainer,
+		.il-item,
+		.ilTagCloud {
 			background-color: $il-slate-bulky-level2-bg-color;
 		}
 	}
 	&[data-depth-level="3"] {
 		.btn-bulky:not(:hover),
-		.link-bulky:not(:hover) {
+		.link-bulky:not(:hover),
+		.ilExplorerContainer,
+		.il-item {
 			background-color: rgba($il-slate-bulky-level2-bg-color, math.div(15%, 100.0%));
 		}
 	}
 	&[data-depth-level="4"] {
 		.btn-bulky:not(:hover),
-		.link-bulky:not(:hover) {
+		.link-bulky:not(:hover),
+		.ilExplorerContainer,
+		.il-item {
 			background-color: rgba($il-slate-bulky-level2-bg-color, math.div(10%, 100.0%));
 		}
 	}

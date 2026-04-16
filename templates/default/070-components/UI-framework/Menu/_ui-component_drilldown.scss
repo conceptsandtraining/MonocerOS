@@ -11,21 +11,19 @@
 //
 //##
 $c-drilldown-header-height: l-spage.$il-mainbar-btn-height;
-$c-drilldown-spacing-vertical: l.$il-padding-medium-vertical;
+$c-drilldown-spacing-vertical: l.$il-padding-small-vertical;
 $c-drilldown-spacing-horizontal: l.$il-padding-medium-horizontal;
 $c-drilldown-element-max-height: button.$input-min-height-large;
 $c-drilldown-min-height: button.$input-min-height-large * 6;
-$c-drilldown-menulevel-bg: $il-bulky-bg-color;
 $c-drilldown-max-width: $il-column-standard-width * 2;
 $c-drilldown-bulky-bg: transparent;
-$c-drilldown-engaged-bg: darken($il-bulky-bg-color-engaged, 20%);
+$c-drilldown-engaged-bg: $il-bulky-bg-color-engaged;
 $c-drilldown-item-hover-bg: $c-drilldown-engaged-bg;
 $c-drilldown-item-font-size: $il-bulky-label-size;
 $c-drilldown-item-spacing: l-spage.$il-slate-content-spacing;
-$c-drilldown-item-font-line-height: $il-bulky-label-size * 1.133333333333333; // line-height of slate bulky btn/link
-$c-drilldown-left-indent: l.$il-padding-medium-horizontal + s-symbol.$il-icon-size-small + math.div(l.$il-padding-medium-horizontal, 2);
+$c-drilldown-left-indent: l.$il-padding-medium-horizontal + s-symbol.$il-icon-size-small + l.$il-padding-small-vertical;
 $c-drilldown-selected-bg: $il-bulky-bg-color-engaged;
-$c-drilldown-menulevel-trigger-bg: transparent;
+$c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
 
 .c-drilldown {
     container-type: inline-size;
@@ -303,8 +301,8 @@ $c-drilldown-menulevel-trigger-bg: transparent;
     .c-drilldown__menulevel--trigger {
         justify-content: space-between;
         text-align: left;
-        padding-left: $c-drilldown-left-indent;
         // bulky-btn left padding + space for small icon + gap
+        padding-left: $c-drilldown-left-indent;
         margin-bottom: l-spage.$il-slate-content-spacing;
     }
 
@@ -312,9 +310,12 @@ $c-drilldown-menulevel-trigger-bg: transparent;
     .c-drilldown__leaf > .link-bulky {
         justify-content: left;
         text-align: left;
-        padding-left: $c-drilldown-left-indent;
         // bulky-btn left padding + space for small icon + gap
         margin-bottom: l-spage.$il-slate-content-spacing;
+        :has(.icon),
+        :has(.glyphicon) {
+            padding-left: $c-drilldown-left-indent;
+        }
     }
 
     .c-drilldown__menu--no-items {

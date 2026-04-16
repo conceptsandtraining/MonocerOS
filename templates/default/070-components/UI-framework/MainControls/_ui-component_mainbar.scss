@@ -8,12 +8,15 @@
 @use "070-components/legacy/component_screen-reader-only" as *;
 
 // MAINBAR VARIABLES
-$il-mainbar-btn-padding: 0;
+$il-mainbar-btn-padding: 2px;
 $il-mainbar-btn-label-icon-gap: $il-padding-xs-vertical;
 
-$il-mainbar-btn-border-radius: $il-border-radius-base;
+$il-mainbar-btn-border-radius: 0;
 
 $il-mainbar-btn-border: 1px solid $il-standard-page-border-light-color;
+$il-mainbar-btn-border-indicator: 4px solid transparent;
+$il-mainbar-btn-border-indicator-active: 4px solid $il-main-color;
+$il-mainbar-btn-border-indicator-hover: 4px solid $il-neutral-color;
 $il-mainbar-btn-label-size: $il-font-size-xsmall;
 $il-mainbar-trigger-icon-size: 25px;
 $il-mainbar-remove-tools-btn-height: 45px;
@@ -43,8 +46,10 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 // GENERAL
 //
 
-.il-mainbar {
-	box-shadow: $il-mainbar-shadow-right;
+.il-layout-page:not(.with-mainbar-slates-engaged) {
+	.il-mainbar {
+		box-shadow: $il-mainbar-engaged-shadow-right;
+	}
 }
 
 //
@@ -68,8 +73,9 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 	.btn-bulky,
 	.il-link.link-bulky {
 		padding: $il-mainbar-btn-padding;
-		border: 0;
+		border: 1px solid transparent;
 		border-bottom: $il-mainbar-btn-border;
+		border-left: $il-mainbar-btn-border-indicator;
 		border-radius: $il-mainbar-btn-border-radius;
 		flex-flow: column nowrap;
 		justify-content: center;
@@ -93,12 +99,12 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 // the left button bar
 //
 
-.il-mainbar-triggers {
+.il-mainbar {
 	.il-mainbar-entries {
 		// reset li styles
 		min-width: 100%;
 		list-style: none;
-		padding: 0px;
+		padding: 0;
 		margin: 0px;
 		li {
 			margin: $il-mainbar-btn-margin;
@@ -112,7 +118,7 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 			text-align: center;
 		}
 		.icon {
-			filter: $il-mainbar-btn-icon-filter;
+			filter: unquote($il-mainbar-btn-icon-filter);
 			&.small {
 				width: $il-mainbar-trigger-icon-size;
 				height: $il-mainbar-trigger-icon-size;
@@ -125,11 +131,13 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 			}
 			background-color: if($hover-or-engaged == "hover", $il-mainbar-btn-bg-color-hover, $il-mainbar-btn-bg-color-engaged);
 			color: if($hover-or-engaged == "hover", $il-mainbar-btn-color-hover, $il-mainbar-btn-color-engaged);
+			border: 1px solid  if($hover-or-engaged == "hover", $il-mainbar-btn-bg-color-hover, $il-mainbar-btn-bg-color-engaged);
+			border-left: if($hover-or-engaged == "hover", $il-mainbar-btn-border-indicator-hover, $il-mainbar-btn-border-indicator-active);
 			.glyph{
 				color: if($hover-or-engaged == "hover", $il-mainbar-btn-color-hover, $il-mainbar-btn-color-engaged);
 			}
 			.icon {
-				filter: if($hover-or-engaged == "hover", $il-mainbar-btn-hover-icon-filter, $il-mainbar-btn-engaged-icon-filter);
+				filter: if($hover-or-engaged == "hover", unquote($il-mainbar-btn-hover-icon-filter), unquote($il-mainbar-btn-engaged-icon-filter));
 			}
 			.bulky-label {
 				color: if($hover-or-engaged == "hover", $il-mainbar-btn-color-hover, $il-mainbar-btn-color-engaged);
@@ -161,7 +169,7 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 				background-color: $il-mainbar-btn-bg-color;
 				color: $il-mainbar-btn-color-engaged;
 				.icon {
-					filter: $il-mainbar-btn-icon-filter;
+					filter: unquote($il-mainbar-btn-icon-filter);
 				}
 				.bulky-label {
 					color: $il-mainbar-btn-color;
@@ -171,7 +179,7 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 				background-color: $il-mainbar-btn-bg-color-engaged;
 				color: $il-mainbar-btn-color-engaged;
 				.icon  {
-					filter: $il-mainbar-btn-engaged-icon-filter;
+					filter: unquote($il-mainbar-btn-engaged-icon-filter);
 				}
 				.bulky-label {
 					color: $il-mainbar-btn-color-engaged;
@@ -187,7 +195,7 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 
 // mainbar slates
 .il-mainbar-slates {
-	box-shadow: $il-mainbar-shadow-right;
+	box-shadow: $il-mainbar-engaged-shadow-right;
 	background: $il-mainbar-slates-bg-color;
 	display: none; // will be flex when engaged
 	position: relative;
@@ -222,19 +230,31 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 
 .il-mainbar-tools-button {
 	flex-direction: row;
-	.btn-bulky,
-	.btn-bulky.engaged {
+	.btn-bulky {
 		background-color: $il-mainbar-tools-btn-bg;
-		color: white;
+		.bulky-label {
+			color: white;
+		}
 		.icon  {
-			filter: $il-mainbar-btn-icon-filter;
+			filter: unquote($il-mainbar-btn-icon-tool-filter);
 		}
 	}
 	.btn-bulky.engaged {
 		background-color: $il-mainbar-tools-btn-bg-engaged;
-		color: $il-mainbar-btn-color-engaged;
+		.bulky-label {
+			color: $il-mainbar-btn-color-engaged;
+		}
 		.icon  {
-			filter: invert(30%);
+			filter: unquote($il-mainbar-btn-engaged-icon-tool-filter);
+		}
+	}
+	.btn-bulky:hover {
+		background-color: $il-mainbar-tools-btn-bg-engaged;
+		.bulky-label {
+			color: $il-mainbar-btn-color-engaged;
+		}
+		.icon  {
+			filter: unquote($il-mainbar-btn-engaged-icon-tool-filter);
 		}
 	}
 }
@@ -253,7 +273,7 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 		background-color: $il-mainbar-tools-tab-btn-bg-disengaged;
 		color: $il-mainbar-btn-color;
 		.icon {
-			filter: $il-mainbar-btn-icon-filter;
+			filter: unquote($il-mainbar-btn-icon-filter);
 		}
 		.bulky-label {
 			text-overflow: ellipsis;
@@ -378,7 +398,6 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 		.btn-bulky,
 	   .il-link.link-bulky {
 	   	   flex-shrink: 0;
-		   border: 0;
 		   height: $il-mainbar-small-btn-height;
 		   width: $il-mainbar-small-btn-width;
 		   .icon.small {

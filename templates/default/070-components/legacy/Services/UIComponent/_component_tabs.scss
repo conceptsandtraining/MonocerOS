@@ -96,6 +96,6 @@ $nav-tabs-border: 2px solid $nav-tabs-active-link-hover-bg !default;
 	}
 }
 
-.il_after_tabs_spacing {
-	// mOS-patch margin-bottom: $il-margin-xlarge-vertical;
+.ilTabsContentOuter {
+	margin-top: $il-margin-large-vertical;
 }

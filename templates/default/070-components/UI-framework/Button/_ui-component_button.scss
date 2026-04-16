@@ -194,8 +194,8 @@ input.btn {
 
     $set-full-width: true,
     $padding-small-x: l.$il-padding-medium-horizontal,
-    $padding-small-y: l.$il-padding-medium-vertical,
-    $inner-spacing: l.$il-padding-medium-vertical,
+    $padding-small-y: l.$il-padding-small-vertical,
+    $inner-spacing: l.$il-padding-small-vertical,
 
     $hover_bg-color: s.$il-bulky-bg-color-engaged,
     $hover_border-color: s.$il-bulky-bg-color-engaged,
@@ -223,6 +223,7 @@ input.btn {
 .il-drilldown {
   .btn-bulky,
   .il-link.link-bulky {
+    border-radius: 0;
     margin-bottom: l-spage.$il-slate-content-spacing;
     .bulky-label {
       flex-grow: 1;

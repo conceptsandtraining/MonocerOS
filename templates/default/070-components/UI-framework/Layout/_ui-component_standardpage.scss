@@ -177,14 +177,11 @@ main {
 		width: 100%;
 		max-width: $screen-lg;
 		margin: 0 auto;
-		&:not(:has(.il-page-content-header)) {
-			padding-top: $il-padding-medium-vertical;
-		}
-			.c-table-data__table-wrapper {
-				margin: 0 calc(50% - (50vw - 70px));
-				table {
-					margin: 0 auto;
-				}
+		.c-table-data__table-wrapper {
+			margin: 0 calc(50% - (50vw - 70px));
+			table {
+				margin: 0 auto;
+			}
 		}
 	}
 }
