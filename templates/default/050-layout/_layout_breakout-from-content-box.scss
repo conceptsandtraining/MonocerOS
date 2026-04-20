@@ -1,0 +1,35 @@
+@use "050-layout/standardpage/layout_standardpage" as spage;
+@use "050-layout/layout_breakpoints" as layout-break;
+
+////
+/// The current page is restricted in a centered max-width boxed container.
+/// Occasionally, we might want to break out of it for a table or a full width banner.
+/// The slate pushing the page to the side is a challenge
+////
+
+@mixin _general-positioning {
+  position: relative;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+@mixin breakout-section($class) {
+  .il-layout-page.with-mainbar-slates-engaged {
+    .#{$class} {
+      @include _general-positioning();
+      right: 50%;
+      left: calc(50% + (spage.$il-mainbar-btn-height + spage.$il-standard-page-slate-width) / 2);
+      max-width: calc(100vw - (spage.$il-mainbar-btn-height + spage.$il-standard-page-slate-width));
+      @content;
+    }
+  }
+  .il-layout-page:not(.with-mainbar-slates-engaged) {
+    .#{$class} {
+      @include _general-positioning();
+      right: 50%;
+      left: calc(50% + (spage.$il-mainbar-btn-height / 2));
+      max-width: calc(100vw - (spage.$il-mainbar-btn-height));
+      @content;
+    }
+  }
+}
