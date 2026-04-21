@@ -36,6 +36,16 @@
       @content;
     }
   }
+  @media screen and (max-width: layout-break.$screen-md) {
+    .il-layout-page.with-mainbar-slates-engaged,
+    .il-layout-page:not(.with-mainbar-slates-engaged) {
+      #{$class} {
+        left: 50%;
+        right: 50%;
+        max-width: 100vw;
+      }
+    }
+  }
 }
 
 /// to center and restrict the width e.g. of paragraph section within a breakout section
