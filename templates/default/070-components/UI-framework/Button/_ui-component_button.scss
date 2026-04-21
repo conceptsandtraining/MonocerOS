@@ -136,6 +136,7 @@ input.btn {
 // design doesn't use the btn mixin because it is easier to style without it
 // Make a button look and behave like a link
 .btn-link {
+  min-height: unset;
   padding: 0;
 	text-align: left;
 	white-space: normal;

@@ -179,7 +179,7 @@ th.c-table-data__cell {
         top: 0;
         z-index: 3;
         &.c-table-data__header__rowselection {
-            padding: $il-padding-xlarge-vertical $il-padding-medium-horizontal;
+            padding: $il-padding-medium-vertical $il-padding-medium-horizontal;
             text-align: center;
             // row selection also sticks to the left
             position: sticky;
@@ -190,7 +190,7 @@ th.c-table-data__cell {
             background: linear-gradient(90deg, rgba(255,255,255,1) 85%, rgba(255,255,255,0) 100%);
         }
         &.c-table-data__header__rowaction {
-            padding: $il-padding-xlarge-vertical $il-padding-medium-horizontal;
+            padding: $il-padding-medium-vertical $il-padding-medium-horizontal;
         }
     }
 }
@@ -220,13 +220,13 @@ th.c-table-data__cell:after {
 
 // Resizable Header Cell
 .c-table-data__header__resize-wrapper {
-    padding: $il-padding-xlarge-vertical $il-padding-medium-horizontal;
+    padding: $il-padding-medium-vertical $il-padding-medium-horizontal;
     height: 100%;
     margin: 0px;
     display: block;
     vertical-align: bottom;
-    // limit max-height
-    max-height: 85px;
+    // limit max-height, so long header cells grow into the cut-off gradient
+    max-height: 100px;
     overflow: hidden;
     //indicate when text is being cut off
     &:after {
@@ -235,7 +235,7 @@ th.c-table-data__cell:after {
         left: 0;
         display: block;
         position: absolute;
-        height: $il-padding-xlarge-vertical * 1.5;
+        height: $il-padding-medium-vertical * 1.5;
         width: calc(100% - 10px);
         background: linear-gradient(360deg, white, transparent);
         pointer-events: none;

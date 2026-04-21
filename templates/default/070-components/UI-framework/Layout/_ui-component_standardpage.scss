@@ -176,7 +176,7 @@ main {
 	    flex-grow: 1; // stretches content from top to footer
 		padding: 0 $il-margin-small-horizontal;
 		width: 100%;
-		max-width: $screen-lg;
+		max-width: $il-content-container-width;
 		margin: 0 auto;
 
 	}
@@ -465,8 +465,14 @@ main {
 	}
 }
 
-@include content-breakout.breakout-section("c-table-data__table-wrapper") {
+@include content-breakout.breakout-section(".c-table-data__table-wrapper") {
 	table {
+		margin: 0 auto;
+	}
+};
+
+@include content-breakout.breakout-section("form:has(.ilTableOuter)") {
+	.ilTableOuter table {
 		margin: 0 auto;
 	}
 };

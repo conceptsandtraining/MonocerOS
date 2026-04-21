@@ -26,13 +26,13 @@
 <div id="mainspacekeeper" class="container-fluid ilContainerWidth {MAINMENU_SPACER}">
 	<div class="row" style="position: relative;">
 	<!-- END pg_intro -->
-	
+
 	{NAVIGATION_HISTORY}
 	<!-- BEGIN ilLocator -->
 	{STATUSLINE}
 	<!-- END ilLocator -->
 
-			<div class="media il_HeaderInner">
+			<div class="il_HeaderContainer"><div class="media il_HeaderInner">
 				<!-- BEGIN head_action -->
 				<div class="ilHeadAction" id="il_head_action">
 					<!-- BEGIN head_action_inner -->{HEAD_ACTION}<!-- END head_action_inner -->
@@ -43,19 +43,19 @@
 				<!-- BEGIN header_image --><img id="headerimage" class="media-object" src="{IMG_HEADER}" alt="{IMAGE_DESC}" /><!-- END header_image -->
 				<h1 class="il-page-content-header media-heading ilHeader">{HEADER}</h1>
 				<!-- END lm_head -->
-			</div>
-	
+			</div></div>
+
 	<div class="ilLMMenu">
 		{MENU}
 		<div class="ilClearFloat"></div>
 	</div>
-	
+
 	<div id="ilLMPageContent" class="ilc_page_frame_PageFrame">
-	
+
 		{MESSAGE}
-		
+
 		{INLINE_JS}
-		
+
 		<!-- BEGIN ilLMNavigation -->
 		<div class="ilc_page_tnav_TopNavigation">
 			<!-- BEGIN ilLMNavigation_Prev -->
@@ -74,7 +74,7 @@
 			<div class="ilClearFloat"></div>
 		</div>
 		<!-- END ilLMNavigation -->
-		
+
 		<!-- BEGIN ilPage -->
 		<div class="ilc_page_cont_PageContainer">
 			<span class="ilAccHidden">
@@ -82,7 +82,7 @@
 			{PAGE_CONTENT}
 		</div>
 		<!-- END ilPage -->
-		
+
 		<!-- BEGIN ilLMNavigation2 -->
 		<div class="ilc_page_bnav_BottomNavigation">
 			<!-- BEGIN ilLMNavigation_Prev2 -->
@@ -100,18 +100,18 @@
 			<div class="ilClearFloat"></div>
 		</div>
 		<!-- END ilLMNavigation2 -->
-		
+
 		{SUBMENU}
-		
+
 		{NOTES}
-	
+
 	</div>
-	
+
 	<!-- BEGIN pg_outro -->
 		</div>
 	</div>
 	<!-- END pg_outro -->
-	
+
 
 <!-- BEGIN on_load_code -->
 <script type="text/javascript">

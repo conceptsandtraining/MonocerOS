@@ -3,7 +3,7 @@
 @use "050-layout/basics" as *;
 
 $table-cell-padding: $il-padding-small-horizontal;
-$table-condensed-cell-padding: $il-padding-small-horizontal;
+$table-condensed-cell-padding: $il-padding-xs-horizontal;
 $table-border-color: $il-main-border-color;
 $table-bg-accent: $il-main-bg; // striped tables legacy were styled back to be un-striped tables
 
@@ -54,8 +54,6 @@ th {
   // Baseline styles
 
   .table {
-	width: 100%;
-	max-width: 100%;
 	margin-bottom: 0;
 	// Cells
 	> thead,
@@ -98,6 +96,10 @@ th {
 	}
   }
 
+  .table.fullwidth {
+	  width: auto;
+  }
+
 
   // Condensed table w/ half padding
 
@@ -124,41 +126,7 @@ th {
 	}
   }
 
-  // Responsive tables
-  //
-  // Wrap your tables in `.table-responsive` and we'll make them mobile friendly
-  // by enabling horizontal scrolling. Only applies <768px. Everything above that
-  // will display normally.
 
-  .table-responsive {
-	min-height: .01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
-	overflow-x: auto;
-
-	@media screen and (max-width: $screen-xs-max) {
-	  width: 100%;
-	  margin-bottom: ($il-line-height-computed * .75);
-	  overflow-y: hidden;
-	  -ms-overflow-style: -ms-autohiding-scrollbar;
-	  border: 1px solid $table-border-color;
-
-	  // Tighten up spacing
-	  > .table {
-		margin-bottom: 0;
-
-		// Ensure the content doesn't wrap
-		> thead,
-		> tbody,
-		> tfoot {
-		  > tr {
-			> th,
-			> td {
-			  white-space: nowrap;
-			}
-		  }
-		}
-	  }
-	}
-  }
 
 
 // end of section based on bootstrap 3
@@ -192,7 +160,7 @@ div.ilTableNav {
 	}
 
 	table {
-		width: 100%;
+		// width: 100%;
 	}
 	select {
 		//See Issue #32398
@@ -251,7 +219,6 @@ div.ilTableOuter {
 }
 
 div.ilTableSelectAll {
-	background-color: $il-main-bg;
 	padding: $il-padding-medium-vertical $il-padding-large-horizontal;
 	font-size: $il-font-size-small;
 	border-top: 1px solid $il-main-border-color;
@@ -262,7 +229,6 @@ div.ilTableSelectAll label {
 }
 
 div.ilTableCommandRow, div.ilTableCommandRowTop {
-	background-color: $il-table-cmd-bg;
 	padding: $il-padding-medium-vertical $il-padding-medium-horizontal;
 	font-size: $il-font-size-small;
 }
@@ -300,14 +266,12 @@ legend.ilTableFilter {
 }
 
 fieldset.ilTableFilter {
-	background-color: $il-main-dark-bg;
 	padding: $il-margin-xlarge-vertical $il-padding-large-horizontal;
 	margin:  $il-margin-medium-vertical 0 $il-padding-large-horizontal 0;
 }
 
 div.ilTableFilterLabel {
 	font-style: italic;
-	background-color: $il-main-dark-bg;
 	padding: 3px 0px;
 }
 
@@ -435,28 +399,5 @@ td > img[src$="icon_custom.svg"] {
 		img, select {
 			display: inline-block;
 		}
-	}
-}
-
-// Because of an issue ion Bootstrap when using Dropdown in Tables we need this. See https://github.com/twbs/bootstrap/issues/11037
-@media (max-width: 767px) {
-  .table-responsive .dropdown-menu,
-  .table-responsive .dropdown-toggle {
-	//position: static !important; // Removed due to https://mantis.ilias.de/view.php?id=22175
-  }
-}
-
-//Note this is fixes the responsive view for the legacy table. In future we should rather move to truly responsive tables.
-//See #27833
-@media only screen and (max-width: $il-grid-float-breakpoint-max) {
-	.table-responsive{
-		overflow-x: auto;
-		max-width: 94vw;
-	}
-}
-
-@media (min-width: $il-grid-float-breakpoint-max) {
-	.table-responsive {
-		overflow: visible;
 	}
 }

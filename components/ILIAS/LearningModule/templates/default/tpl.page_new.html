@@ -37,7 +37,7 @@
 	{STATUSLINE}
 	<!-- END ilLocator -->
 
-	<div class="media il_HeaderInner">
+	<div class="il_HeaderContainer"><div class="media il_HeaderInner">
 		<!-- BEGIN head_action -->
 		<div class="ilHeadAction" id="il_head_action">
 			<!-- BEGIN head_action_inner -->{HEAD_ACTION}<!-- END head_action_inner -->
@@ -48,13 +48,13 @@
 		<!-- BEGIN header_image --><img id="headerimage" class="media-object" src="{IMG_HEADER}" alt="{IMAGE_DESC}" /><!-- END header_image -->
 		<h1 class="il-page-content-header media-heading ilHeader">{HEADER}</h1>
 		<!-- END lm_head -->
-	</div>
-	
+	</div></div>
+
 	<div class="ilLMMenu">
 		{MENU}
 		<div class="ilClearFloat"></div>
 	</div>
-	
+
 	<div id="ilLMPageContent" class="ilc_page_frame_PageFrame">
 		{MESSAGE}
 		{INLINE_JS}

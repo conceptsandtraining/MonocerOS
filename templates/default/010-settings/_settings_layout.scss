@@ -1,5 +1,7 @@
 @use "050-layout/layout_breakpoints" as *;
 
+$il-content-container-width: $screen-lg;
+
 $il-grid-float-breakpoint-max: $screen-sm-max !default; //Note if changed, breakpoint_max_width in src/UI/templates/js/Page/stdpage.js must also be adapted
 $il-grid-float-breakpoint:  $screen-sm-min !default;
 $il-column-standard-width: 329px !default;

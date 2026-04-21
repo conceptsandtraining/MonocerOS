@@ -1,3 +1,4 @@
+@use "010-settings" as settings;
 @use "050-layout/standardpage/layout_standardpage" as spage;
 @use "050-layout/layout_breakpoints" as layout-break;
 
@@ -7,15 +8,18 @@
 /// The slate pushing the page to the side is a challenge
 ////
 
+/// Some common positioning values. Needs right and left positioning values to work.
 @mixin _general-positioning {
   position: relative;
   margin-left: -50vw;
   margin-right: -50vw;
 }
 
+/// MUST stand alone on root level. MUST NOT be nested.
+/// Breaks a section out of the boxed content page to reach from the edge of the mainbar or slate to the other side.
 @mixin breakout-section($class) {
   .il-layout-page.with-mainbar-slates-engaged {
-    .#{$class} {
+    #{$class} {
       @include _general-positioning();
       right: 50%;
       left: calc(50% + (spage.$il-mainbar-btn-height + spage.$il-standard-page-slate-width) / 2);
@@ -24,7 +28,7 @@
     }
   }
   .il-layout-page:not(.with-mainbar-slates-engaged) {
-    .#{$class} {
+    #{$class} {
       @include _general-positioning();
       right: 50%;
       left: calc(50% + (spage.$il-mainbar-btn-height / 2));
@@ -32,4 +36,11 @@
       @content;
     }
   }
+}
+
+/// to center and restrict the width e.g. of paragraph section within a breakout section
+@mixin inner-boxed-section($inner-width: settings.$il-content-container-width) {
+  margin: 0 auto;
+  width: auto;
+  max-width: $inner-width;
 }
