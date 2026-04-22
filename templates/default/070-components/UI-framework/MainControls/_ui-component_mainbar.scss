@@ -5,6 +5,7 @@
 @use "030-tools/tool_multi-line-cap" as t-line-cap;
 @use "050-layout/basics" as *;
 @use "050-layout/standardpage/" as *;
+@use "050-layout/layout_breakpoints" as l-breaks;
 @use "070-components/legacy/component_screen-reader-only" as *;
 
 // MAINBAR VARIABLES
@@ -195,10 +196,12 @@ $il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small
 
 // mainbar slates
 .il-mainbar-slates {
-	box-shadow: $il-mainbar-engaged-shadow-right;
 	background: $il-mainbar-slates-bg-color;
 	display: none; // will be flex when engaged
 	position: relative;
+	@include l-breaks.on-screen-size(large) {
+		box-shadow: $il-mainbar-engaged-shadow-right;
+	}
 }
 
 .il-maincontrols-mainbar {
