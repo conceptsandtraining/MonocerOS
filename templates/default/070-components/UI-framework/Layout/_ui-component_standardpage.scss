@@ -174,11 +174,13 @@ main {
 	overflow: auto;
 	#mainspacekeeper {
 	    flex-grow: 1; // stretches content from top to footer
-		padding: 0 $il-margin-small-horizontal;
+		padding: 0 $il-margin-medium-horizontal;
 		width: 100%;
 		max-width: $il-content-container-width;
 		margin: 0 auto;
-
+		@include on-screen-size(small) {
+			padding: 0 $il-margin-small-horizontal;
+		}
 	}
 }
 #il_center_col {
