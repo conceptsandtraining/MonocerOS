@@ -21,8 +21,8 @@ $il-standard-page-slate-width: $il-column-standard-width;
 // MAINBAR
 //
 
-$il-mainbar-btn-height:  t-scale.scale-with-ratio($scale-ratio, 6, $spacing-base) !default;
-$il-mainbar-btn-width: t-scale.scale-with-ratio($scale-ratio, 6, $spacing-base);
+$il-mainbar-btn-height:  90px !default;
+$il-mainbar-btn-width: 90px !default;
 $il-mainbar-btn-margin: null;
 
 $il-mainbar-width: $il-mainbar-btn-width;

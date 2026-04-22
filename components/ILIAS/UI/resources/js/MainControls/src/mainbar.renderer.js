@@ -179,8 +179,8 @@
                 window_width = $(window).width(),
                 horizontal = il.UI.page.isSmallScreen(),
                 btn = $(css.mainbar_buttons).first()
-                btn_height = btn.height(),
-                btn_width = btn.width(),
+                btn_height = btn.outerHeight(),
+                btn_width = btn.outerWidth(),
                 amount_buttons = Math.floor(
                     (window_height - parts.mainbar.getOffsetTop()) / btn_height
                 );
