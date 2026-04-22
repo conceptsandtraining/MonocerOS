@@ -1,22 +1,14 @@
 @use "050-layout/basics" as l;
+@use "050-layout/layout_input-checkbox-section" as l-check;
 
 .c-field-radio {
 	> .c-field-radio__item {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: l.$il-margin-medium-vertical;
-		&:first-child {
-			margin-top: 0;
-		}
+		@include l-check.make-check-input-container();
 		> input {
-			margin-right: l.$il-margin-small-horizontal;
-			width: auto;
-		}
-		> label {
-			flex-grow: 1;
+			@include l-check.make-flanking-checkbox();
 		}
 		> .c-input__help-byline {
-			width: 100%;
+			@include l-check.make-fullwidth-byline();
 		}
 	}
 }

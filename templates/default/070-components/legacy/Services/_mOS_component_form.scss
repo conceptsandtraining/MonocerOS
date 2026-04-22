@@ -3,6 +3,7 @@
 @use "050-layout/layout_breakpoints" as breakpoints;
 @use "030-tools/tool_focus-outline" as focus;
 @use "050-layout/basics" as layout-basics;
+@use "050-layout/layout_input-checkbox-section" as l-check;
 
 ///
 // Refactoring of the **legacy forms** for ILIAS Essential.
@@ -74,6 +75,33 @@ $input-field-disabled-bg-color: legacy-form.$il-input-bg-disabled !default;
   }
 }
 
+// General Stylings to both legacy and UI framework forms
+.help-block {
+  margin-top: layout-basics.$il-margin-xs-vertical;
+  font-size: settings.$il-font-size-small;
+}
+
+// TODO: Would be better to do this in elements or normalize
+@include textfield-like-inputs {
+  border: 1px solid $input-field-border-color;
+  padding: $input-field-padding;
+}
+
+.radio input,
+input[type="checkbox"],
+input[type="radio"] {
+  width: 1.2rem;
+  height: 1.2rem
+}
+
+.form-horizontal,
+.c-form {
+  select {
+    min-width: 300px;
+  }
+}
+
+
 //
 // # Common Horizontal Layout
 //
@@ -103,6 +131,9 @@ $input-field-disabled-bg-color: legacy-form.$il-input-bg-disabled !default;
     display: inline-block;
     cursor: pointer;
     margin-top: $spacing-small-buffer-vertical; // should be identical to input field vertical padding
+    @include breakpoints.on-screen-size(small) {
+      margin-bottom: $spacing-small-buffer-vertical;
+    }
   }
 
   @include textfield-like-inputs {
@@ -115,6 +146,9 @@ $input-field-disabled-bg-color: legacy-form.$il-input-bg-disabled !default;
       display: flex;
       gap: $spacing-small-buffer-vertical;
       align-items: center;
+    }
+    .help-block {
+      margin-top: layout-basics.$il-margin-xs-vertical;
     }
   }
 
@@ -167,22 +201,6 @@ $input-field-disabled-bg-color: legacy-form.$il-input-bg-disabled !default;
 // # Inputs in all layouts
 //
 .form-group {
-  .help-block {
-    margin-top: layout-basics.$il-margin-xs-vertical;
-    font-size: settings.$il-font-size-small;
-  }
-
-  // TODO: Would be better to do this in elements or normalize
-  @include textfield-like-inputs {
-    border: 1px solid $input-field-border-color;
-    padding: $input-field-padding;
-  }
-
-  .radio input,
-  input[type="checkbox"] {
-    width: 1.2rem;
-    height: 1.2rem  }
-
   .form-control {
     &[disabled],
     &[readonly],

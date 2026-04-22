@@ -1,0 +1,27 @@
+@use "050-layout/basics" as l;
+
+@mixin make-check-input-container() {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  margin-top: l.$il-margin-medium-vertical;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+@mixin make-flanking-checkbox() {
+  grid-column: 1 / 2;
+  margin-right: l.$il-margin-xs-horizontal;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+@mixin make-label() {
+  grid-column: 2 / 3;
+}
+
+@mixin make-fullwidth-byline() {
+  margin-top: l.$il-margin-xs-vertical;
+  grid-column: 1 / 3;
+}

@@ -2,7 +2,8 @@
 @use "050-layout/basics" as l;
 
 .c-form .c-input[data-il-ui-component="section-field-input"].c-input {
-  margin-bottom: l.$il-margin-xlarge-vertical * 2;
+  margin-bottom: l.$il-margin-xlarge-vertical;
+  margin-top: l.$il-margin-small-vertical;
   display: flex;
   flex-direction: column;
 
@@ -10,10 +11,10 @@
     order: 1;
     width: 100%;
     h3, h4, h5, h6 {
-      display: inline-block;
+      display: inline;
     }
     h2 {
-      display: inline-block;
+      display: inline;
       font-size: s.$il-font-size-xlarge;
       font-weight: s.$il-font-weight-bold;
     }

@@ -72,8 +72,16 @@
                         "label help";
 
   margin-top: l.$il-margin-xlarge-vertical;
+
   &:first-child {
     margin-top: 0;
+  }
+
+  > .c-input__field > .c-input > .c-input__field >.c-input {
+    margin-top: l.$il-margin-large-vertical;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   > label {
@@ -153,6 +161,7 @@
 		max-width: 100%; // otherwise textarea size can be dragged beyond mainspacekeeper in many browers
   }
   [data-il-ui-component="text-field-input"] .c-input__field input,
+  [data-il-ui-component="numeric-field-input"] .c-input__field input,
   [data-il-ui-component="password-field-input"] .c-input__field .c-field-password input,
   [data-il-ui-component="textarea-field-input"] .c-input__field textarea,
   [data-il-ui-component="markdown-field-input"] > .c-input__field .c-field-markdown textarea,
@@ -168,5 +177,17 @@
   }
   [data-il-ui-component="select-field-input"] .c-input__field select {
     padding: l.$il-padding-xs-vertical l.$il-padding-xs-horizontal;
+  }
+  // everything with a input min width bar
+  [data-il-ui-component="text-field-input"],
+  [data-il-ui-component="numeric-field-input"],
+  [data-il-ui-component="password-field-input"],
+  [data-il-ui-component="textarea-field-input"],
+  [data-il-ui-component="markdown-field-input"],
+  [data-il-ui-component="select-field-input"],
+  [data-il-ui-component="url-field-input"] {
+    > label {
+      margin-top: l.$il-margin-xs-vertical
+    }
   }
 }
