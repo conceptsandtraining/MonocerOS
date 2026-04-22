@@ -70,8 +70,8 @@ $cursor-disabled: not-allowed !default;
 	overflow: auto;
 	min-width: 200px;
 	max-height: 50vh;
-	padding: l.$il-padding-medium-vertical 0;
-	margin: l.$il-margin-small-vertical 0 0; // override default ul
+	padding: 0;
+	margin: 0; // override default ul
 	font-size: s.$il-font-size-base;
 	text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
 	list-style: none;
@@ -79,8 +79,6 @@ $cursor-disabled: not-allowed !default;
 	background-clip: padding-box;
 	border: 1px solid $dropdown-border;
 	border-radius: s.$il-border-radius-base;
-	@include t-ven.box-shadow(0 6px 12px rgba(0, 0, 0, .175));
-
 	// Aligns the dropdown menu to right
 	//
 	// Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
@@ -236,7 +234,7 @@ $cursor-disabled: not-allowed !default;
 	background-color: $dropdown-bg;
 	font-weight: s.$il-font-weight-base;
 	border: 0 none;
-	@include t-ven.box-shadow(t-menu.$il-dropdown-shadow);
+	box-shadow: s.$il-shadow--large;
 	// in repo "add object" dropdown
 	.row {
 		margin-bottom: math.div(l.$grid-gutter-width, 2);

@@ -44,10 +44,6 @@ $il-metabar-small-glyph-size: 1.25rem;
 		display: block;
 	}
 
-	p {
-		padding: 0;
-	}
-
 	form#mm_search_form {
 		padding: 20px;
 	}
@@ -116,7 +112,7 @@ $il-metabar-small-glyph-size: 1.25rem;
 }
 
 .il-metabar-slates {
-	box-shadow: $il-mainbar-shadow-right;
+	box-shadow: $il-shadow--large;
     background-color: $il-metabar-slates-bg-color;
 	position: absolute;
 
