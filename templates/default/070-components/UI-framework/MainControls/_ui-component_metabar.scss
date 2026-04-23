@@ -90,7 +90,7 @@ $il-metabar-small-glyph-size: 1.25rem;
 
 	@media only screen and (max-width: $il-grid-float-breakpoint-max) {
 		.il-metabar-more-button {
-			padding-right: $il-padding-xlarge-horizontal;
+			padding-right: $il-padding-medium-horizontal;
 			.icon.custom {
 				position: relative;
 				img {

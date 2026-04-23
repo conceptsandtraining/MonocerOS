@@ -6,53 +6,53 @@
 @use "050-layout/basics" as *;
 @use "030-tools/tool_scale-with-ratio" as t-scale;
 
-$il-standard-page-border-light-color: $il-main-border-color;
+$il-standard-page-border-light-color: $il-main-border-color !default;
 
-$il-avatar-size: t-symbol.$il-icon-size-large;
-$il-avatar-inner-mobile-size: $il-avatar-size * 0.5;
+$il-avatar-size: t-symbol.$il-icon-size-large !default;
+$il-avatar-inner-mobile-size: $il-avatar-size * 0.5 !default;
 
 //** controls margin from the footer to the main content, increase/decrase depending on the content (default, space for 4 lines).
-$il-footer-margin-bottom: 2 * $il-line-height-computed * 2;
+$il-footer-margin-bottom: 2 * $il-line-height-computed * 2 !default;
 
-$il-standard-page-content-padding: 20px;
-$il-standard-page-slate-width: $il-column-standard-width;
+$il-standard-page-content-padding: 20px !default;
+$il-standard-page-slate-width: $il-column-standard-width !default;
 
 //
 // MAINBAR
 //
 
-$il-mainbar-btn-height:  90px !default;
-$il-mainbar-btn-width: 90px !default;
-$il-mainbar-btn-margin: null;
+$il-mainbar-btn-height:  90px !default !default;
+$il-mainbar-btn-width: 90px !default !default;
+$il-mainbar-btn-margin: null !default;
 
-$il-mainbar-width: $il-mainbar-btn-width;
+$il-mainbar-width: $il-mainbar-btn-width !default;
 
 //
 // SLATES
 //
 
-$il-slate-content-spacing: $il-padding-small-horizontal;
+$il-slate-content-spacing: $il-padding-small-horizontal !default;
 
-$il-mainbar-close-slate-btn-height: 45px;
-$il-metabar-close-slate-btn-height: 30px;
+$il-mainbar-close-slate-btn-height: 45px !default;
+$il-metabar-close-slate-btn-height: 30px !default;
 
-$il-slate-bulky-glyph-size: 1.0625rem;
-$il-slate-bulky-icon-size: 1.0625rem;
+$il-slate-bulky-glyph-size: 1.0625rem !default;
+$il-slate-bulky-icon-size: 1.0625rem !default;
 
-$il-slate-content-spacing: 2px;
+$il-slate-content-spacing: 2px !default;
 
 //** breadcrumbs
-$il-standard-page-breadcrumbs-height: s-form.$il-input-min-height + 2 * $il-padding-xs-vertical;
-$il-standard-page-breadcrumbs-seperator: " \e606";
-$il-standard-page-breadcrumbs-bg-color: $il-main-bg;
-$il-standard-page-breadcrumbs-color: $il-link-color;
-$il-standard-page-breadcrumbs-active-color: $il-link-hover-color;
-$il-standard-page-breadcrumbs-divider-color: $il-neutral-light-color;
-$il-standard-page-breadcrumbs-font-weight: $il-font-weight-base;
+$il-standard-page-breadcrumbs-height: s-form.$il-input-min-height + 2 * $il-padding-xs-vertical !default;
+$il-standard-page-breadcrumbs-seperator: " \e606" !default;
+$il-standard-page-breadcrumbs-bg-color: $il-main-bg !default;
+$il-standard-page-breadcrumbs-color: $il-link-color !default;
+$il-standard-page-breadcrumbs-active-color: $il-link-hover-color !default;
+$il-standard-page-breadcrumbs-divider-color: $il-neutral-light-color !default;
+$il-standard-page-breadcrumbs-font-weight: $il-font-weight-base !default;
 
 //** Shadows
-$il-standard-page-shadow-color: rgba(0, 0, 0, .1);
-$il-mainbar-shadow-right: none;
-$il-mainbar-engaged-shadow-right: 1px 3px 4px $il-standard-page-shadow-color;
-$il-mainbar-shadow-top: 0 0 4px $il-standard-page-shadow-color;
-$il-standard-page-header-shadow-bottom: 0 1px 2px $il-standard-page-shadow-color;
+$il-standard-page-shadow-color: rgba(0, 0, 0, .1) !default;
+$il-mainbar-shadow-right: none !default;
+$il-mainbar-engaged-shadow-right: 1px 3px 4px $il-standard-page-shadow-color !default;
+$il-mainbar-shadow-top: 0 0 4px $il-standard-page-shadow-color !default;
+$il-standard-page-header-shadow-bottom: 0 1px 2px $il-standard-page-shadow-color !default;

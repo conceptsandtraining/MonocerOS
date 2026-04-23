@@ -4,3 +4,7 @@
 @use "layout_grid";
 @use "layout_element-bar";
 @use "layout_visibility-utilities";
+
+// Exposing variables to entrance point
+@forward "050-layout/standardpage/layout_standardpage";
+@forward "050-layout/standardpage/layout_standardpage-mobile";
