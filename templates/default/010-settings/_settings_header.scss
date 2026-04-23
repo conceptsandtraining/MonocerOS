@@ -4,8 +4,8 @@
 @use "050-layout/basics" as l;
 
 //** header
-$il-standard-page-logo-height: t-scale.scale-with-ratio(l.$scale-ratio, 5, l.$spacing-base) !default;
-$il-standard-page-logo-width: t-scale.scale-with-ratio(l.$scale-ratio, 5, l.$spacing-base) !default;
+$il-standard-page-logo-height: t-scale.scale-with-ratio(l.$scale-ratio, 4, l.$spacing-base) !default;
+$il-standard-page-logo-width: t-scale.scale-with-ratio(l.$scale-ratio, 4, l.$spacing-base) !default;
 $il-standard-page-header-height: t-scale.scale-with-ratio(l.$scale-ratio, 6, l.$spacing-base) !default;
 $il-standard-page-header-bg-color: s-color.$il-main-bg !default;
 
