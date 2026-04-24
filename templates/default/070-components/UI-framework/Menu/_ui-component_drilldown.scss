@@ -10,20 +10,20 @@
 //== Drilldown Menu
 //
 //##
-$c-drilldown-header-height: l-spage.$il-mainbar-btn-height;
-$c-drilldown-spacing-vertical: l.$il-padding-small-vertical;
-$c-drilldown-spacing-horizontal: l.$il-padding-medium-horizontal;
-$c-drilldown-element-max-height: button.$input-min-height-large;
-$c-drilldown-min-height: button.$input-min-height-large * 6;
-$c-drilldown-max-width: $il-column-standard-width * 2;
-$c-drilldown-bulky-bg: transparent;
-$c-drilldown-engaged-bg: $il-bulky-bg-color-engaged;
-$c-drilldown-item-hover-bg: $c-drilldown-engaged-bg;
-$c-drilldown-item-font-size: $il-bulky-label-size;
-$c-drilldown-item-spacing: l-spage.$il-slate-content-spacing;
-$c-drilldown-left-indent: l.$il-padding-medium-horizontal + s-symbol.$il-icon-size-small + l.$il-padding-small-vertical;
-$c-drilldown-selected-bg: $il-bulky-bg-color-engaged;
-$c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
+$c-drilldown-header-height: l-spage.$il-mainbar-btn-height !default;
+$c-drilldown-spacing-vertical: l.$il-padding-small-vertical !default;
+$c-drilldown-spacing-horizontal: l.$il-padding-medium-horizontal !default;
+$c-drilldown-element-max-height: button.$input-min-height-large !default;
+$c-drilldown-min-height: button.$input-min-height-large * 6 !default;
+$c-drilldown-max-width: $il-column-standard-width * 2 !default;
+$c-drilldown-bulky-bg: transparent !default;
+$c-drilldown-engaged-bg: $il-main-darker-bg !default;
+$c-drilldown-item-hover-bg: $il-highlight-bg !default;
+$c-drilldown-item-font-size: $il-bulky-label-size !default;
+$c-drilldown-item-spacing: 0 !default;
+$c-drilldown-left-indent: l.$il-padding-medium-horizontal + s-symbol.$il-icon-size-small + l.$il-padding-small-vertical !default;
+$c-drilldown-selected-bg: $il-main-darker-bg !default;
+$c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color !default;
 
 .c-drilldown {
     container-type: inline-size;
@@ -60,9 +60,16 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
             padding: 0;
         }
         .c-drilldown__filter {
-            display: block;
-            padding-left: 0;
+            display: flex;
             width: 100%;
+            padding: 0;
+            align-items: center;
+            label {
+                margin-right: l.$il-margin-small-horizontal;
+            }
+            input {
+                flex-grow: 1;
+            }
         }
 
         > :nth-child(2) {
@@ -99,6 +106,7 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
     .c-drilldown__menulevel--trigger {
         @extend .btn;
         @extend .btn-bulky;
+        border-radius: 0;
         &:focus-visible {
             z-index: 100;
         }
@@ -124,6 +132,7 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
         > .btn-bulky,
         > .link-bulky {
             display: flex;
+            border-radius: 0;
         }
         > hr {
             display: block;
@@ -150,6 +159,9 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
         }
         .c-drilldown__menu .c-drilldown__menulevel--trigger {
             background: $c-drilldown-selected-bg;
+            border-color: $c-drilldown-selected-bg;
+            margin-bottom: 0;
+            padding-left: l.$il-padding-medium-vertical;
             > .glyphicon-triangle-right {
                 display: none;
             }
@@ -169,7 +181,7 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
                     display: none;
                 }
                 .c-drilldown__filter {
-                    display: block;
+                    display: flex;
                 }
             }
             &.c-drilldown__header--showbacknavtwocol {
@@ -190,6 +202,7 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
                 > .c-drilldown__branch {
                     > .c-drilldown__menulevel--trigger {
                         background-color: $c-drilldown-engaged-bg;
+                        border-color: $c-drilldown-engaged-bg;
                     }
                     > ul {
                         overflow: auto;
@@ -200,6 +213,7 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
                         > .link-bulky {
                             display: flex;
                             background-color: $c-drilldown-selected-bg;
+                            border-color: $c-drilldown-selected-bg;
                             position: relative;
                             z-index: 40;
                             &:hover {
@@ -242,9 +256,9 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
                 flex-direction: row;
                 max-height: $c-drilldown-element-max-height;
                 flex: 0 1 50%;
-                margin-bottom: 2px;
 
                 > ul {
+                    background-color: $c-drilldown-selected-bg;
                     position: relative;
                     flex: 1 0 50%;
                 }
@@ -256,6 +270,7 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
                 }
             }
             > .c-drilldown__menuitem--engaged > .c-drilldown__menulevel--trigger {
+                border-color: $c-drilldown-engaged-bg;
                 background: $c-drilldown-engaged-bg;
             }
             .c-drilldown__menulevel--engaged {
@@ -269,10 +284,11 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
                     > .btn-bulky,
                     > .link-bulky  {
                         background-color: $c-drilldown-selected-bg;
+                        border-color: $c-drilldown-selected-bg;
                         position: relative;
                         z-index: 40;
                         &:hover {
-                            background-color: $c-drilldown-engaged-bg;
+                            background-color: $c-drilldown-item-hover-bg;
                             border-color: $c-drilldown-item-hover-bg;
                         }
                     }
@@ -310,8 +326,6 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color;
     .c-drilldown__leaf > .link-bulky {
         justify-content: left;
         text-align: left;
-        // bulky-btn left padding + space for small icon + gap
-        margin-bottom: l-spage.$il-slate-content-spacing;
         :has(.icon),
         :has(.glyphicon) {
             padding-left: $c-drilldown-left-indent;
