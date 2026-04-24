@@ -23,7 +23,7 @@ $il-card-border: $il-panel-border;
 $il-card-border-radius: 0;
 
 .il-card {
-	padding: 0 0 $il-padding-medium-vertical 0;
+	padding: 0 0 $il-padding-xs-vertical 0;
 	width: 100%;
 	position:relative;
 	background-color: $il-card-background;
@@ -80,7 +80,7 @@ $il-card-border-radius: 0;
 	}
 
 	.caption{
-		padding: $il-padding-medium-vertical $il-padding-small-horizontal;
+		padding: $il-padding-xs-vertical $il-padding-small-horizontal;
 
 		//See #28508
 		overflow-wrap: break-word;
@@ -105,7 +105,7 @@ $il-card-border-radius: 0;
 		padding: 0 $il-padding-small-horizontal;
 
 		> div {
-			padding: $il-padding-medium-vertical $il-padding-small-horizontal;
+			padding: $il-padding-xs-vertical $il-padding-small-horizontal;
 			float: left;
 		}
 
@@ -125,7 +125,7 @@ $il-card-border-radius: 0;
 
 		> div.il-card-repository-dropdown {
 			float:right;
-			padding: ($il-padding-medium-vertical + $il-padding-small-vertical) $il-padding-small-horizontal;
+			padding: $il-margin-small-vertical $il-margin-xs-horizontal;
 
 			> .dropdown {
 				> button {
