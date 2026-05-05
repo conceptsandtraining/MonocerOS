@@ -194,7 +194,7 @@ div.ilTableHeaderTitleBlock {
 }
 
 div.ilTableHeaderTitle {
-	margin: $il-padding-xlarge-vertical 0 0 $il-padding-large-horizontal;
+	margin: $il-padding-large-vertical 0 $il-padding-medium-vertical $il-padding-large-horizontal;
 	padding: 0;
 	+ .ilHeaderDesc {
 		margin: 0 $il-padding-large-horizontal $il-padding-large-vertical;
