@@ -392,8 +392,6 @@ div.Access {
 	color: $il-text-light-color;
 }
 
-#block_pdcal_0 {
-	.ilFloatRight {
-		float: unset;
-	}
+.calmini + .ilFloatRight {
+	float: unset;
 }
