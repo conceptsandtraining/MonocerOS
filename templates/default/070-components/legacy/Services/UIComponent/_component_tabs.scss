@@ -6,6 +6,8 @@ $nav-tabs-active-link-hover-bg: $il-text-color !default;
 $nav-tabs-active-link-hover-color: $il-text-color-invert !default;
 $nav-tabs-active-link-hover-border-color: $il-text-color !default;
 $nav-tabs-border: 2px solid $nav-tabs-active-link-hover-bg !default;
+$nav-tabs-padding: $il-padding-xs-vertical $il-padding-small-horizontal !default;
+$nav-tabs-margin-right: null !default;
 /* Services/UIComponent/Tabs */
 
 #ilTab {
@@ -25,15 +27,19 @@ $nav-tabs-border: 2px solid $nav-tabs-active-link-hover-bg !default;
 			margin: 0;
 			font-size: $il-font-size-base;
 			line-height: $il-line-height-base;
-			padding: $il-padding-xs-vertical $il-padding-small-horizontal;
+			padding: $nav-tabs-padding;
+			margin-right: $nav-tabs-margin-right;
 			border-bottom: 2px solid transparent;
 			border-radius: $il-border-radius-base $il-border-radius-base 0 0;
 
-			&:hover {
-				border-color: $il-main-bg $il-main-bg $nav-tabs-active-link-hover-bg;
-			}
 			@include focus.clear-focus-for-override($clearAfter: true);
 			@include focus.il-focus();
+
+			&:hover,
+			&:focus,
+			&:active {
+				border-bottom: 2px solid $nav-tabs-active-link-hover-bg;
+			}
 		}
 
 		// Active state, and its :hover to override normal :hover
