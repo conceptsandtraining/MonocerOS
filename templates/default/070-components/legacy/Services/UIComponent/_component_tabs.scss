@@ -58,12 +58,12 @@ $nav-tabs-border: 2px solid $nav-tabs-active-link-hover-bg !default;
 
 /* Sub Tabs */
 #ilSubTab {
-	padding: $il-padding-xs-vertical 0;
+	padding-bottom: $il-padding-large-vertical;
 	margin: 0;
 
 	> li:first-child > a,
     > li:first-child > .c-tooltip__container > a {
-		padding-left: $il-padding-xs-horizontal;
+		padding-left: 0;
 	}
 
 
