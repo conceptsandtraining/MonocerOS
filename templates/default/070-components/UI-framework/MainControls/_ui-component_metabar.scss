@@ -48,16 +48,8 @@ $il-metabar-small-glyph-size: 1.25rem;
 		padding: 20px;
 	}
 
-	.badge {
-		position: absolute;
-	}
-
 	.btn, .il-link {
 		position: relative;
-	}
-
-	.il-counter {
-		font-size: $il-metabar-glyph-size;
 	}
 
 	 > li > .btn.btn-bulky, > li > a.il-link.link-bulky {
@@ -95,16 +87,6 @@ $il-metabar-small-glyph-size: 1.25rem;
 				position: relative;
 				img {
 					margin-right: $il-margin-small-horizontal;
-				}
-				.badge {
-					position: absolute;
-					margin-right: $il-margin-xs-horizontal;
-					&.il-counter-novelty {
-						margin-top: -$il-margin-medium-vertical;
-					}
-					&.il-counter-status {
-						margin-top: $il-margin-xlarge-vertical;
-					}
 				}
 			}
 		}

@@ -35,7 +35,8 @@ $il-counter-novelty-position-top: -5px;
 
 // this class is randomly used stand-alone in some legacy html templates
 .badge {
-  min-width: 10px;
+  min-width: 2ch;
+  min-height: 2ch;
   font-size: $il-counter-font-size;
   margin-left: $il-counter-margin-left;
   text-align: center;
