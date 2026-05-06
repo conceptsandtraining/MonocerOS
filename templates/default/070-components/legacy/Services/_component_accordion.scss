@@ -6,7 +6,7 @@
 /* Services/Accordion */
 
 .il_VAccordionHead, .il_HAccordionHead {
-	padding: $il-padding-small-horizontal $il-padding-small-horizontal $il-padding-small-horizontal ($il-padding-small-horizontal+30px);
+	padding: $il-padding-small-horizontal $il-padding-small-horizontal $il-padding-small-horizontal ($il-padding-large-vertical + 40px); // adding space for the glyph
 	text-align: left;
 	cursor: pointer;
 	color: $il-link-color;
@@ -35,8 +35,9 @@
 
 .il_VAccordionContent, .il_HAccordionContent {
 	padding-top: $il-padding-large-vertical;
-	>.c-form.c-form--horizontal {
-		padding: 0px $il-padding-large-horizontal;
+	>.c-form.c-form--horizontal,
+	>form {
+		padding: 0 $il-padding-large-horizontal $il-padding-large-vertical $il-padding-large-horizontal;
 	}
 }
 .il_HAccordionHeadActive, .il_VAccordionHeadActive {
