@@ -48,7 +48,7 @@ $il-vc-pagination-btn-active-bg: $il-main-bg;
 .il-viewcontrol-pagination .last,
 .il-viewcontrol-mode {
 	// turn any buttons in bar into viewcontrol buttons
-	> .btn-default, > .btn-link  {
+	> .btn-default, > .btn-link, > .btn.dropdown-toggle  {
 		@extend .btn-ctrl;
 	}
 	> .btn-default, > .btn-link, > .btn-ctrl  {

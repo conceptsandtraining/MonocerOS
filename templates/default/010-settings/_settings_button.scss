@@ -34,8 +34,10 @@ $il-engaged-btn-bg: white !default;
 $il-btn-ctrl-color: s-color.$il-link-color !default;
 //** Background color of the primary button (most important button on the screen)
 $il-btn-ctrl-bg: s-color.$il-highlight-bg !default;
+$il-btn-ctrl-hover-bg: s-color.$il-main-bg !default;
 //** Border color of the primary button (most important button on the screen)
 $il-btn-ctrl-border: s-color.$il-highlight-bg !default;
+$il-btn-ctrl-hover-border: s-border.$il-main-border-color !default;
 $il-btn-ctrl-engaged-border: s-color.$il-link-color !default;
 $il-btn-ctrl-outer-height: s-form.$il-input-min-height + 2 * l.$il-padding-xs-vertical !default;
 $il-btn-ctrl-inner-btn-height: s-form.$il-input-min-height !default;
