@@ -61,11 +61,13 @@ $c-drilldown-menulevel-trigger-bg: $il-bulky-bg-color !default;
         }
         .c-drilldown__filter {
             display: flex;
+            flex-wrap: wrap;
             width: 100%;
             padding: 0;
             align-items: center;
             label {
                 margin-right: l.$il-margin-small-horizontal;
+                margin-bottom: l.$il-margin-small-vertical;
             }
             input {
                 flex-grow: 1;
