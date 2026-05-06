@@ -56,6 +56,7 @@ $il-metabar-small-glyph-size: 1.25rem;
 		@include f.il-focus-border-only();
 		border: $il-metabar-entry-border;
 		background-color: transparent;
+	    min-height: $il-metabar-entry-height;
 		height: $il-metabar-entry-height;
 		min-width: $il-metabar-entry-width;
 

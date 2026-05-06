@@ -17,8 +17,11 @@
 		font-size: $il-font-size-large;
 		border-bottom: 0;
 	}
-	p {
-		white-space: nowrap;
+}
+
+#mm_search_form {
+	.input-group {
+		display: flex;
 	}
 }
 
