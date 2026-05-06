@@ -392,6 +392,12 @@ div.Access {
 	color: $il-text-light-color;
 }
 
+// fix mini calendar subscribe button overflowing from panel
 .calmini + .ilFloatRight {
 	float: unset;
+}
+
+// adding tag to repository object in modal
+#ilTagFormAjax textarea {
+	width: 100%;
 }
