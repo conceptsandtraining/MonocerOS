@@ -51,6 +51,11 @@ h2.ilHeader {
 div.ilHeadAction {
 	float: right;
 	margin: 8px 0 5px; /* bottom 5px blog fullscreen */
+	#headp_not_icon {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+	}
 }
 
 div.ilHeadAction .prop {
