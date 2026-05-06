@@ -141,6 +141,7 @@ $table-ordering__inset-row__shadow: inset 0px 0px 14px 2px #00000063;
 .c-table-data__table {
     background-color: $il-main-bg;
     &-wrapper {
+        padding: 0 $il-padding-large-vertical;
         box-shadow: none;
     }
 }

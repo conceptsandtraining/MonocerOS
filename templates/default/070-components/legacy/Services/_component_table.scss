@@ -214,7 +214,7 @@ h3.ilTableHeaderTitle {
 }
 
 div.ilTableOuter {
-	padding: 0;
+	margin: 0 $il-margin-large-vertical;
 	background-color: $il-main-dark-bg;
 }
 
@@ -382,10 +382,8 @@ div.ilTableCommandRowTop {
 	background-color: $il-data-table-bg;
 
 	tr {
-		td:first-child {
-			input[type="checkbox"] {
-				margin-left: calc($il-padding-large-horizontal - $il-padding-medium-horizontal);
-			}
+	td:first-child:has(input[type="checkbox"]) {
+			padding-left: $il-padding-large-horizontal;
 		}
 	}
 }
