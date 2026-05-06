@@ -9,39 +9,39 @@
 @use "070-components/legacy/component_screen-reader-only" as *;
 
 // MAINBAR VARIABLES
-$il-mainbar-btn-padding: 2px;
-$il-mainbar-btn-label-icon-gap: $il-padding-xs-vertical;
+$il-mainbar-btn-padding: 2px !default;
+$il-mainbar-btn-label-icon-gap: $il-padding-xs-vertical !default;
 
-$il-mainbar-btn-border-radius: 0;
+$il-mainbar-btn-border-radius: 0 !default;
 
-$il-mainbar-btn-border: 1px solid $il-standard-page-border-light-color;
-$il-mainbar-btn-border-indicator: 4px solid transparent;
-$il-mainbar-btn-border-indicator-active: 4px solid $il-main-color;
-$il-mainbar-btn-border-indicator-hover: 4px solid $il-neutral-color;
-$il-mainbar-btn-label-size: $il-font-size-xsmall;
-$il-mainbar-trigger-icon-size: 25px;
-$il-mainbar-remove-tools-btn-height: 45px;
+$il-mainbar-btn-border: 1px solid $il-standard-page-border-light-color !default;
+$il-mainbar-btn-border-indicator: 4px solid transparent !default;
+$il-mainbar-btn-border-indicator-active: 4px solid $il-main-color !default;
+$il-mainbar-btn-border-indicator-hover: 4px solid $il-neutral-color !default;
+$il-mainbar-btn-label-size: $il-font-size-xsmall !default;
+$il-mainbar-trigger-icon-size: 25px !default;
+$il-mainbar-remove-tools-btn-height: 45px !default;
 
 // TOOLS VARIABLES
 
-$il-mainbar-tools-item-gap: 3px;
+$il-mainbar-tools-item-gap: 3px !default;
 
-$il-mainbar-tools-btn-bg: $il-warning-color;
-$il-mainbar-tools-bg: $il-main-dark-bg;
+$il-mainbar-tools-btn-bg: $il-warning-color !default;
+$il-mainbar-tools-bg: $il-main-dark-bg !default;
 
-$il-mainbar-tools-btn-bg-engaged: lighten($il-main-color, 50%);
-$il-mainbar-tools-tab-btn-bg-engaged: white;
-$il-mainbar-tools-tab-btn-bg-disengaged: $il-main-color;
+$il-mainbar-tools-btn-bg-engaged: lighten($il-main-color, 50%) !default;
+$il-mainbar-tools-tab-btn-bg-engaged: white !default;
+$il-mainbar-tools-tab-btn-bg-disengaged: $il-main-color !default;
 
 // SLATES VARIABLES
 
-$il-mainbar-slates-bg-color: $il-main-bg;
-$il-maincontrols-mainbar-bg-color: $il-mainbar-btn-bg-color;
+$il-mainbar-slates-bg-color: $il-main-bg !default;
+$il-maincontrols-mainbar-bg-color: $il-mainbar-btn-bg-color !default;
 
 // bulky colors are in button settings
-$il-slate-bulky-padding-vertical: $il-padding-xlarge-vertical;
-$il-slate-bulky-padding: $il-slate-bulky-padding-vertical 40px $il-slate-bulky-padding-vertical $il-padding-small-horizontal;
-$il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small-horizontal $il-slate-bulky-padding-vertical $il-padding-small-horizontal;
+$il-slate-bulky-padding-vertical: $il-padding-xlarge-vertical !default;
+$il-slate-bulky-padding: $il-slate-bulky-padding-vertical 40px $il-slate-bulky-padding-vertical $il-padding-small-horizontal !default;
+$il-slate-bulky-link-padding: $il-slate-bulky-padding-vertical $il-padding-small-horizontal $il-slate-bulky-padding-vertical $il-padding-small-horizontal !default;
 
 //
 // GENERAL

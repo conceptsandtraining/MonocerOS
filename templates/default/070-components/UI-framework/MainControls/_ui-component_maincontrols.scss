@@ -1,9 +1,9 @@
 //== Specific Components
 //
 //
-@import "./Slate/_ui-component_slate";
-@import "_ui-component_metabar";
-@import "_ui-component_mainbar";
-@import "_ui-component_footer";
-@import "_ui-component_mode_info";
-@import "_ui-component_system_info";
+@use "070-components/UI-framework/MainControls/Slate/_ui-component_slate";
+@use "070-components/UI-framework/MainControls/_ui-component_metabar";
+@use "070-components/UI-framework/MainControls/_ui-component_mainbar";
+@use "070-components/UI-framework/MainControls/_ui-component_footer";
+@use "070-components/UI-framework/MainControls/_ui-component_mode_info";
+@use "070-components/UI-framework/MainControls/_ui-component_system_info";
