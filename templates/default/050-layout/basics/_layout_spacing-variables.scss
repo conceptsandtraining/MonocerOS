@@ -10,10 +10,10 @@ $spacing-base: 16px;
 // GENERAL SPACINGS
 //
 
-$_spacing-xsmall-vertical: t-scale.scale-with-ratio($scale-ratio, -3, $spacing-base);
+$_spacing-xsmall-vertical: t-scale.scale-with-ratio($scale-ratio, -3.5, $spacing-base);
 $_spacing-xsmall-horizontal: $_spacing-xsmall-vertical * $_vertical-to-horizontal-ratio;
 
-$_spacing-small-vertical: t-scale.scale-with-ratio($scale-ratio, -2, $spacing-base);
+$_spacing-small-vertical: t-scale.scale-with-ratio($scale-ratio, -1.75, $spacing-base);
 $_spacing-small-horizontal: $_spacing-small-vertical * $_vertical-to-horizontal-ratio;
 
 $_spacing-medium-vertical: $spacing-base;

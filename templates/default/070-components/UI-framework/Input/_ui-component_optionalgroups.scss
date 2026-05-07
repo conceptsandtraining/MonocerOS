@@ -50,7 +50,7 @@
 			&:first-child {
 				margin-top: l.$il-margin-medium-vertical;
 			}
-			padding: l.$il-padding-large-vertical l.$il-padding-large-horizontal;
+			padding: l.$il-padding-medium-vertical l.$il-padding-medium-horizontal;
 			background-color: s.$il-main-dark-bg;
 			@include c-input_switch-bg-hover(none, s.$il-main-darker-bg);
 		}

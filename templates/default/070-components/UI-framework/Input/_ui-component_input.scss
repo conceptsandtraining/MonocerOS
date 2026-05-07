@@ -71,14 +71,14 @@
                         "label error"
                         "label help";
 
-  margin-top: l.$il-margin-xlarge-vertical;
+  margin-top: l.$il-margin-large-vertical;
 
   &:first-child {
     margin-top: 0;
   }
 
-  > .c-input__field > .c-input > .c-input__field >.c-input {
-    margin-top: l.$il-margin-large-vertical;
+  > .c-input__field > .c-input  {
+    margin-top: l.$il-margin-medium-vertical;
     &:first-child {
       margin-top: 0;
     }
@@ -141,11 +141,11 @@
     border: 1px solid $il-alert-danger-border;
   }
   .c-input__help-byline {
-    margin-top: l.$il-margin-small-vertical;
+    margin-top: l.$il-margin-xs-vertical;
     font-size: $il-font-size-small;
   }
   .c-input__error-msg {
-    margin-top: l.$il-margin-small-vertical;
+    margin-top: l.$il-margin-xs-vertical;
     &:first-child {
       margin-top: 0;
     }
