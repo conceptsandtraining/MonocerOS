@@ -185,9 +185,12 @@
   [data-il-ui-component="textarea-field-input"],
   [data-il-ui-component="markdown-field-input"],
   [data-il-ui-component="select-field-input"],
+  [data-il-ui-component="date-time-field-input"],
+  [data-il-ui-component="duration-field-input"],
+  [data-il-ui-component="link-field-input"],
   [data-il-ui-component="url-field-input"] {
     > label {
-      margin-top: l.$il-margin-xs-vertical
+      margin-top: l.$il-margin-small-vertical
     }
   }
 }
