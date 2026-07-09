@@ -1,5 +1,6 @@
 @use "010-settings" as *;
-@use "050-layout/basics/_layout_spacing-variables"as *;
+@use "010-settings/legacy-settings/legacy-settings_form" as *;
+@use "050-layout/basics" as *;
 @use "070-components/legacy/component_alert" as alert;
 
 /* not yet refactored code from former ta.css */
@@ -307,6 +308,20 @@ table.kprimchoicewizard th
 {
     vertical-align: top;
 }
+
+table.imagemapareas tr,
+table.kvpwizard tr,
+table.matchingwizard tr,
+table.matchingpairwizard tr,
+table.errortextwizard tr,
+table.singlechoicewizard tr,
+table.multiplechoicewizard tr {
+	[class*="_add"].btn {
+		min-width: $il-input-min-height;
+		min-height: $il-input-min-height;
+	}
+}
+
 table.kprimchoicewizard th.true,
 table.kprimchoicewizard th.false
 {
@@ -405,8 +420,26 @@ table.il_tst_answer_aggregation td.answer_frequency
 	margin-right: 2px;
 }
 
+#thumb_size {
+	min-width: 10ch;
+}
 
 .imageselection {
+	width: max-content;
+	> .row {
+		margin: 0;
+		padding: 0;
+	}
+	> .row > [class*="col-"] {
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+	> .row > [class*="col-"] > .input-group input {
+		field-sizing: content;
+		border: none;
+		background: transparent;
+	}
 }
 
 .questionpool_info {
