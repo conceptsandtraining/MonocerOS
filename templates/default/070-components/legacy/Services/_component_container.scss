@@ -56,11 +56,11 @@ div.ilPreconditionItem {
 
 /* Repository */
 div.ilContainerListItemOuter {
-	padding: $il-padding-medium-vertical $il-padding-medium-horizontal;
+	padding: basic-layout.$il-padding-medium-vertical basic-layout.$il-padding-medium-horizontal;
 	zoom: 1;
 
 	.subitem {
-		margin-right: (-$il-padding-large-horizontal);
+		margin-right: (-(basic-layout.$il-padding-large-horizontal));
 	}
 }
 
@@ -72,8 +72,8 @@ div.ilContainerListItemOuter {
 
 div.tblfooter {
 	&.ilContainerListFooter {
-		font-size: $il-font-size-base;
-		padding: $il-padding-large-vertical $il-padding-large-horizontal;
+		font-size: settings.$il-font-size-base;
+		padding: basic-layout.$il-padding-large-vertical basic-layout.$il-padding-large-horizontal;
 		text-align: left;
 		margin: 0;
 		> input {
@@ -100,7 +100,7 @@ div.ilListItemSection {
 }
 
 div.ilContainerListItemOuterHighlight {
-	background-color: $il-highlight-bg;
+	background-color: settings.$il-highlight-bg;
 	zoom: 1;
 }
 
@@ -114,7 +114,7 @@ div.ilContainerListItemCB {
 	width: 25px;*/
 	display: table-cell;
 	vertical-align: top;
-	padding-right: $il-padding-large-horizontal;
+	padding-right: basic-layout.$il-padding-large-horizontal;
 
 	img{
 		width: 20px;
@@ -130,17 +130,17 @@ div.ilContainerListItemIcon {
 }
 div.ilContainerListItemIcon a {
 	display: block;
-	margin-top: -$il-padding-small-vertical;
+	margin-top: -(basic-layout.$il-padding-small-vertical);
 }
 
 div.ilContainerListItemIconCB {
-	margin-left: $il-padding-large-horizontal;
+	margin-left: basic-layout.$il-padding-large-horizontal;
 }
 
 div[class^="il_editarea"] .ilContainerListItemOuter img,
 img.ilListItemIcon {
-	width: $il-icon-size-medium;
-	height: $il-icon-size-medium;
+	width: symbol.$il-icon-size-medium;
+	height: symbol.$il-icon-size-medium;
 	max-width: none;
 }
 
@@ -157,8 +157,8 @@ div.ilContainerListItemContentCB {
 }
 
 div.il_ContainerListItem {
-	margin: $il-padding-small-vertical 0;
-	padding-left: $il-padding-medium-horizontal;
+	margin: basic-layout.$il-padding-small-vertical 0;
+	padding-left: basic-layout.$il-padding-medium-horizontal;
 	width:100%;
 }
 
@@ -176,17 +176,17 @@ div.il_ContainerListItem {
 	background-size: 20px 20px;
 	padding-left: 45px;
 	/* padding-top: 6px; */
-	background-color: $il-main-dark-bg;
+	background-color: settings.$il-main-dark-bg;
 	cursor: pointer;
 }
 
 
 .ilContainerBlockHeaderExpanded {
-	background-image: url("#{$il-background-images-path}nav/tree_exp.svg");
+	background-image: url("#{settings.$il-background-images-path}nav/tree_exp.svg");
 }
 
 .ilContainerBlockHeaderCollapsed {
-	background-image: url("#{$il-background-images-path}nav/tree_col.svg");
+	background-image: url("#{settings.$il-background-images-path}nav/tree_col.svg");
 }
 
 
@@ -206,18 +206,18 @@ div#ilContRepIntro img {
 }
 
 .ilContObjectiveObjectListItem {
-	background-color: $il-main-bg;
+	background-color: settings.$il-main-bg;
 }
 
 .ilContObjectivesViewTestItem {
-	background-color: $il-main-dark-bg;
+	background-color: settings.$il-main-dark-bg;
 	margin-bottom: 10px;
 }
 
 
 .ilContainerTileRows {
-	padding: $il-padding-medium-vertical $il-padding-large-horizontal;
-	background-color: $il-main-bg;
+	padding: basic-layout.$il-padding-medium-vertical basic-layout.$il-padding-large-horizontal;
+	background-color: settings.$il-main-bg;
 }
 
 .ilContainerTileRows .card-no-highlight {
@@ -234,9 +234,9 @@ div#ilContRepIntro img {
 
 .ilContainerShowMore {
 	padding: 15px 10px;
-	background-color: $il-main-dark-bg;
+	background-color: settings.$il-main-dark-bg;
 	text-align: center;
-	margin: 0 (-$il-padding-large-horizontal);
+	margin: 0 (-(basic-layout.$il-padding-large-horizontal));
 }
 
 .il_ContainerListItem .navbar-form .modal .radio {
@@ -255,14 +255,13 @@ div#ilContRepIntro img {
 	display: block;
 }
 .il_ContainerItemTitle .btn {
-	font-size: $il-font-size-large;
+	font-size: settings.$il-font-size-large;
+}
 
 .ilObjListRow {
-  padding: $container-inner-padding;
   &:hover {
     background-color: settings.$il-main-dark-bg;
   }
-
 }
 
 // select all control in manage view
