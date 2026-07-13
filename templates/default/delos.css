@@ -14991,6 +14991,13 @@ div.ilCalSelTitle {
   font-size: 0.866rem;
 }
 
+.il-viewcontrol-section .il-btn-month {
+  font-size: 0.866rem;
+}
+.il-viewcontrol-section .il-btn-month input[inputmode=numeric] {
+  width: 9ch !important;
+}
+
 table.calmini {
   width: 100%;
   font-size: 0.866rem;
@@ -16571,6 +16578,15 @@ input[type=radio] {
 }
 @media screen and (max-width: 768px) {
   .form-horizontal .control-label {
+    margin-bottom: 10px;
+  }
+}
+.form-horizontal .il_InfoScreenPropertyValue {
+  margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .form-horizontal .il_InfoScreenPropertyValue {
+    margin-top: 0;
     margin-bottom: 10px;
   }
 }
