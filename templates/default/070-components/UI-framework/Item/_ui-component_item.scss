@@ -227,3 +227,13 @@ $il-item-gap-xs: 1px;
 		}
 	}
 }
+
+// udon patch start
+.il-mainbar-slates {
+	.il-item {
+		h4.il-item-title {
+			font-size: inherit;
+		}
+	}
+}
+// udon patch end

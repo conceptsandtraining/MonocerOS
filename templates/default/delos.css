@@ -5294,6 +5294,10 @@ hr.il-divider-with-label {
     min-width: 73.32px;
   }
 }
+.il-mainbar-slates .il-item h4.il-item-title {
+  font-size: inherit;
+}
+
 .c-launcher .btn-bulky {
   background-color: #557b2e;
   color: white;
