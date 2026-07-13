@@ -97,6 +97,13 @@ div.ilCalSelTitle {
 	font-size: $il-font-size-small;
 }
 
+.il-viewcontrol-section .il-btn-month {
+	font-size: $il-font-size-small;
+	input[inputmode="numeric"] {
+		width: 9ch !important;
+	}
+}
+
 table.calmini {
 	width: 100%;
 	font-size: $il-font-size-small;
