@@ -135,6 +135,13 @@ input[type="radio"] {
       margin-bottom: $spacing-small-buffer-vertical;
     }
   }
+  .il_InfoScreenPropertyValue {
+    margin-top: $spacing-small-buffer-vertical;
+    @include breakpoints.on-screen-size(small) {
+      margin-top: 0;
+      margin-bottom: $spacing-small-buffer-vertical;
+    }
+  }
 
   @include textfield-like-inputs {
     min-width: 100%;
