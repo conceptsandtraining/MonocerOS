@@ -475,7 +475,7 @@ main {
 	}
 };
 
-@include content-breakout.breakout-section("form:has(.ilTableOuter)") {
+@include content-breakout.breakout-section(".il-layout-page-content:not(:has(#il_right_col)) form:has(.ilTableOuter)") {
 	.ilTableOuter table {
 		margin: 0 auto;
 	}
