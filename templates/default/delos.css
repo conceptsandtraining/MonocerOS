@@ -15351,7 +15351,9 @@ div.ilChartWrapper {
 }
 .ilContainerListItemOuter .ilContainerListItemCB {
   grid-area: checkbox;
-  align-self: center;
+  align-self: flex-start;
+  padding: 0;
+  margin-block-start: 10px;
   margin-inline-end: 13.33px;
 }
 .ilContainerListItemOuter .ilContainerListItemContent {
@@ -15370,7 +15372,7 @@ div.ilChartWrapper {
 .il_ContainerListItem .ilFloatRight {
   grid-area: dropdown;
 }
-.il_ContainerListItem .ilListItemSection {
+.il_ContainerListItem .ilListItemSection, .il_ContainerListItem .subitem {
   grid-column: 1/3;
 }
 
@@ -15378,13 +15380,8 @@ div.ilPreconditionItem {
   margin: 0 -10px;
 }
 
-/* Repository */
 div.ilContainerListItemOuter {
-  padding: 16px 21.328px;
-  zoom: 1;
-}
-div.ilContainerListItemOuter .subitem {
-  margin-right: -26.66px;
+  margin: 16px 0;
 }
 
 .ilContainerItemsContainer {
@@ -15440,23 +15437,6 @@ div.ilContainerListItemCB img {
   width: 20px;
 }
 
-div.ilContainerListItemIcon {
-  /* margin-top: -3px;
-     float: left;
-  position: absolute; */
-  display: table-cell;
-  vertical-align: top;
-}
-
-div.ilContainerListItemIcon a {
-  display: block;
-  margin-top: -10px;
-}
-
-div.ilContainerListItemIconCB {
-  margin-left: 26.66px;
-}
-
 div[class^=il_editarea] .ilContainerListItemOuter img,
 img.ilListItemIcon {
   width: 35px;
@@ -15474,12 +15454,6 @@ div.ilContainerListItemContent {
 /* If checkbox is activated, add spacing */
 div.ilContainerListItemContentCB {
   /* margin-left: 60px; */
-}
-
-div.il_ContainerListItem {
-  margin: 10px 0;
-  padding-left: 21.328px;
-  width: 100%;
 }
 
 .ilContainerBlockHeader .form-control {
