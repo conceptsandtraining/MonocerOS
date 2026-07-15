@@ -2,7 +2,7 @@
 @use "010-settings" as s;
 @use "030-tools/_tool_browser-prefixes" as *;
 @use "010-settings/legacy-settings/legacy-settings_menu" as t-menu;
-@use "070-components/UI-framework/Dropdown/ui-component_dropdown" as c-drp;
+@use "030-tools/tool_context-menu" as c-drp;
 
 /* jquery ui autocomplete */
 .ui-menu {

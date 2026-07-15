@@ -1,4 +1,5 @@
 @use "010-settings"as *;
+@use "010-settings/legacy-settings/legacy-settings_form" as ls-form;
 @use "050-layout/basics" as *;
 @use "050-layout/layout_breakpoints" as *;
 
@@ -18,7 +19,7 @@ $il-standard-filter-input-section-padding-bottom: 40px;
 $il-standard-filter-input-section-margin: 0;
 $il-standard-filter-input-section-multiselect-margin: 0.8em;
 $il-standard-filter-input-group-width: 100%;
-$il-standard-filter-input-group-height: 33px;
+$il-standard-filter-input-group-height: ls-form.$il-input-min-height; // udon patch
 $il-standard-filter-select-input-border: 1px solid $il-main-border-dark-color;
 $il-standard-filter-label-width: 30%;
 $il-standard-filter-input-remove-width: 10%;

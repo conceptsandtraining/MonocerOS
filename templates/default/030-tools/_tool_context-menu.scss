@@ -1,0 +1,68 @@
+@use "010-settings" as s;
+@use "010-settings/legacy-settings/legacy-settings_menu" as t-menu;
+@use "010-settings/legacy-settings/legacy-settings_form" as s-form;
+@use "030-tools/legacy-bootstrap-mixins/nav-divider" as t-ndiv;
+@use "050-layout/basics" as l;
+
+$dropdown-bg: s.$il-main-bg !default;
+$dropdown-link-color: s.$il-text-color !default;
+$dropdown-link-hover-color: s.$il-text-hover-color !default;
+$dropdown-link-hover-bg: s.$il-highlight-bg !default;
+$dropdown-divider-bg: s.$il-main-border-dark-color !default;
+$dropdown-link-disabled-color: s.$il-neutral-light-color !default;
+$cursor-disabled: not-allowed !default;
+
+@mixin context-menu__container() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: $dropdown-bg;
+  text-align: start;
+  font-weight: s.$il-font-weight-base;
+  font-size: t-menu.$il-font-size-dropdown;
+  a {
+    text-decoration: none;
+    text-align: start;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@mixin context-menu__item($disabled-classname: "&[disabled], &.disabled") {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  line-height: s.$il-line-height-base;
+  background-color: t-menu.$dropdown-link-bg;
+  color: $dropdown-link-color;
+  min-height: s-form.$il-input-min-height;
+  padding: l.$il-padding-small-vertical l.$il-padding-large-horizontal;
+  justify-content: start;
+  white-space: nowrap;
+  &:hover,
+  &:focus {
+    color: $dropdown-link-hover-color;
+    background-color: $dropdown-link-hover-bg;
+    text-decoration: none;
+  }
+  #{$disabled-classname} {
+    &,
+    &:hover,
+    &:focus {
+      color: $dropdown-link-disabled-color;
+      background-color: s.$il-disabled-btn-bg;
+      text-decoration: none;
+      cursor: $cursor-disabled;
+      background-image: none; // Remove CSS gradient
+    }
+  }
+}
+
+@mixin context-menu__divider() {
+  @include t-ndiv.nav-divider($dropdown-divider-bg);
+  margin: 0;
+}

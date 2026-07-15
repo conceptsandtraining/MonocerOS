@@ -1,0 +1,118 @@
+@use "010-settings" as s;
+@use "010-settings/legacy-settings/legacy-settings_form" as ls-form;
+@use "030-tools/tool_context-menu" as menumaker;
+@use "050-layout/basics" as l;
+@use "070-components/UI-framework/Button/ui-component_button" as button;
+
+$filter-tab-bg: s.$il-main-dark-bg;
+
+// visibility & collapsing
+.il-filter {
+  // hidden/collapsed parts
+  span[data-collapse-glyph-visibility="0"],
+  span[data-expand-glyph-visibility="0"],
+  div[data-section-inputs-expanded="0"] {
+    display: none;
+  }
+  // expand/collapse btn caret
+  span[data-collapse-glyph-visibility="1"],
+  span[data-expand-glyph-visibility="1"] {
+    display: inline;
+  }
+  // filter body
+  div[data-section-inputs-expanded="1"] {
+    display: grid;
+  }
+  // data-active-input-expanded does not work in ILIAS release_10, let's not include it for now
+}
+
+// top bar
+.il-filter .il-filter-bar {
+  display: flex;
+  gap: l.$il-margin-small-horizontal;
+  align-items: center;
+  .il-filter-bar-opener {
+    flex-grow: 1;
+    button {
+      text-align: left;
+      @extend .btn-bulky;
+      border: 1px solid $filter-tab-bg;
+      background-color: $filter-tab-bg;
+      border-radius: 0;
+    }
+  }
+}
+
+// filter inputs
+.il-filter-input-section.row {
+  all: unset;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  column-gap: l.$il-margin-small-horizontal;
+  row-gap: l.$il-margin-small-vertical;
+  background-color: $filter-tab-bg;
+  padding: l.$il-padding-medium-vertical l.$il-padding-medium-horizontal;
+  [class*="col-"] {
+    all: unset;
+    .input-group {
+      display: flex;
+      // left & right btns
+      > .input-group-addon {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin-top: 0;
+        height: ls-form.$il-input-min-height;
+      }
+      // left label btn
+      > label.input-group-addon {
+        width: 150px;
+      }
+      // center input field
+      > input, > select, > .form-control, > .c-input-group {
+        min-width: unset;
+        max-height: ls-form.$il-input-min-height;
+        width: auto;
+        flex-grow: 1;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+      > .form-control, select {
+        border: 1px solid ls-form.$il-input-border-color;
+        background-color: ls-form.$il-input-bg;
+        padding: l.$il-padding-small-vertical l.$il-padding-small-horizontal
+      }
+      // right
+      > .input-group-addon.rightaddon {
+        display: block;
+        width: ls-form.$il-input-min-height;
+      }
+    }
+    .il-popover-content:not(:has(.il-filter-add-list)) {
+      padding: l.$il-padding-medium-vertical l.$il-padding-medium-horizontal;
+      width: 400px;
+      input[type="checkbox"] {
+        margin-top: 0;
+      }
+    }
+    .il-popover-content:has(.il-filter-add-list) {
+      .il-filter-add-list ul {
+        @include menumaker.context-menu__container();
+        li .btn {
+          @include menumaker.context-menu__item();
+        }
+      }
+    }
+  }
+  .btn-bulky {
+    min-height: ls-form.$il-input-min-height;
+  }
+  .il-filter-controls {
+    all: unset;
+    display: flex;
+    gap: l.$il-margin-small-horizontal;
+    .btn-bulky {
+      flex-grow: 1;
+    }
+  }
+}
