@@ -6122,6 +6122,9 @@ a[aria-disabled].il-link.link-bulky:hover {
   visibility: hidden;
 }
 
+.il-maincontrols-slate.engaged[data-depth-level="2"] {
+  background-color: #f9f9f9;
+}
 .il-maincontrols-slate.engaged[data-depth-level="2"] .btn-bulky:not(:hover),
 .il-maincontrols-slate.engaged[data-depth-level="2"] .link-bulky:not(:hover),
 .il-maincontrols-slate.engaged[data-depth-level="2"] .ilExplorerContainer,
