@@ -245,7 +245,8 @@ div.ilEditVAccordICont {
 	background-color: $il-main-bg;
 }
 
-.ilTinyMenuSection .dropdown, .il-copg-button-group .dropdown {
+.ilTinyMenuSection .dropdown, .il-copg-button-group .dropdown,
+.ilTinyMenuSection .btn {
 	display:inline-block;
 }
 .ilTinyMenuSection .dropdown-menu .btn, .il-copg-button-group .dropdown-menu .btn {
@@ -262,14 +263,8 @@ div.ilEditVAccordICont {
 }
 
 div.ilTinyMenuSection, .il-copg-button-group {
-	/* border-right: 1px solid #e0e0e0; */
-	/* padding: 0 10px 4px 0; */
-	margin-right: 10px;
-	margin: 10px 10px 10px 0;
-
 	p {
 		margin-bottom: 5px;
-		padding: 2px 5px;
 		background-color: darken($il-main-dark-bg, 4%);
 	}
 	.btn {
@@ -304,13 +299,15 @@ div.il-copg-button-group-wide {
 #iltinymenu .bd div.last {
 	float: left;
 	white-space: nowrap;
-	padding: 0 10px 2px 0;
 	border-right: 0;
 	margin: 0;
 }
 
 #iltinymenu {
-	padding: 0 $il-padding-large-horizontal;
+	h2.ilHeader {
+		display: block;
+		margin-bottom: $il-margin-medium-vertical;
+	}
 	.bd {
 		div {
 			&.last {
@@ -710,7 +707,7 @@ div.ilCOPGMediaPrint {
 }
 
 #copg-editor-slate-content {
-	padding: $il-padding-large-vertical 0px;
+	padding: $il-padding-large-vertical $il-padding-large-horizontal;
 
 	p {
 		padding: 0;
@@ -718,7 +715,6 @@ div.ilCOPGMediaPrint {
 	}
 
 	p.ilTinyInfo {
-		padding: 4px;
 		width: 100%;
 		@media only screen and (max-width: $il-grid-float-breakpoint-max) {
 			display: none;
@@ -734,10 +730,32 @@ div.ilCOPGMediaPrint {
 	div.alert {
 		margin: 10px 0;
 	}
+	// mOS & UdonLMS
+	form.c-form--horizontal,
 	form.form-horizontal {
-		margin-bottom: $il-padding-large-vertical;
+		select {
+			min-width: unset;
+			width: 100%;
+		}
+		input[type="checkbox"] {
+			margin-top: $il-margin-xs-vertical;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		label,
+		.content-label {
+			margin-bottom: $il-margin-xs-vertical;
+		}
+	}
+	form.c-form--horizontal {
+		.c-input[data-il-ui-component] {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	form.form-horizontal {
 		.ilFormHeader {
-			padding: $il-padding-large-vertical $il-padding-large-horizontal;
 			h3.ilHeader {
 				font-size: $il-font-size-base;
 			}
@@ -746,26 +764,12 @@ div.ilCOPGMediaPrint {
 			width: 100%;
 		}
 		.control-label {
-			text-align: left;
-			font-weight: bold;
-			min-height: auto;
-			padding-bottom: 0;
-			margin-bottom: 0;
 		}
 		.ilFormFooter {
-			padding: $il-padding-small-vertical $il-padding-large-horizontal;
 			background-color: $il-main-bg;
 		}
 	}
-
-	> .btn-link {
-		padding: 0px $il-padding-large-horizontal;
-	}
-}
-
-#copg-table-top-actions,
-#copg-top-actions {
-	padding: 0 $il-padding-large-horizontal;
+	// mOS & UdonLMS
 }
 
 #copg-table-top-actions .il-viewcontrol-mode {

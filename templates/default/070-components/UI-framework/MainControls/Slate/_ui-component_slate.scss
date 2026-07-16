@@ -147,8 +147,7 @@ $il-slate-tree-padding: $il-padding-small-vertical 0;
 		padding: 0 $il-slate-content-spacing*2;
 	}
 
-	> .c-form,
-	> #copg-editor-slate-content > .c-form {
+	> .c-form {
 		padding: $il-padding-large-vertical $il-padding-large-horizontal;
 	}
 }

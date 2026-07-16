@@ -26,6 +26,8 @@ $input-field-padding-vertical: layout-basics.$il-padding-small-vertical;
 /// @type list
 $input-field-padding: $input-field-padding-vertical layout-basics.$il-padding-small-horizontal !default;
 
+/// fallback to unify the length of short fields - currently only used by select dropdown
+$default-input-min-width: 260px;
 /// left label column
 $left-form-column-width: 33.33% !default;
 /// right label column
@@ -97,7 +99,7 @@ input[type="radio"] {
 .form-horizontal,
 .c-form {
   select {
-    min-width: 300px;
+    min-width: $default-input-min-width;
   }
 }
 
