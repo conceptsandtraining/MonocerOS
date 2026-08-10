@@ -35,11 +35,26 @@ export default class Dropdown {
   #list;
 
   /**
+   * @type {HTMLElement}
+   */
+  #slate;
+
+  /**
+   * @type {HTMLElement}
+   */
+  #mainbar;
+
+  /**
    * @param {HTMLElement} element
    */
   constructor(element) {
     this.#element = element;
     this.#document = element.ownerDocument;
+
+    // dropdown needs to react to these areas
+    // may be null in certain legacy modes
+    this.#slate = this.#document.querySelector('.il-mainbar-slates');
+    this.#mainbar = this.#document.querySelector('.il-mainbar');
 
     this.#button = this.#element.querySelector(':scope > button');
     if (this.#button === null) {
@@ -82,23 +97,31 @@ export default class Dropdown {
    * @type {function(FocusEvent)}
    */
   #hideOnFocusOut = (event) => {
-    if(!this.#element.contains(event.relatedTarget)) {
+    if (!this.#element.contains(event.relatedTarget)) {
       this.hide();
     }
-  }
+  };
 
+  // udon-patch start - modified for dropdown behavior in slate
   #align = () => {
-    const availableWidth = this.#document.documentElement.clientWidth;
-    const buttonPosition = this.#button.getBoundingClientRect().left;
-    const listWidth = this.#list.getBoundingClientRect().width;
-    if (buttonPosition + listWidth > availableWidth) {
-      this.#list.classList.remove('dropdown-menu__right');
-      this.#list.classList.add('dropdown-menu__left');
+    if (this.#slate && this.#slate.contains(this.#element)) {
+      const buttonPosition = this.#button.getBoundingClientRect().left - this.#mainbar.clientWidth;
+      this.#list.style.width = `${String(this.#slate.clientWidth)}px`;
+      this.#list.style.left = `${String(-buttonPosition)}px`;
     } else {
-      this.#list.classList.remove('dropdown-menu__left');
-      this.#list.classList.add('dropdown-menu__right');
+      const availableWidth = this.#document.documentElement.clientWidth;
+      const buttonPosition = this.#button.getBoundingClientRect().left;
+      const listWidth = this.#list.getBoundingClientRect().width;
+      if (buttonPosition + listWidth > availableWidth) {
+        this.#list.classList.remove('dropdown-menu__right');
+        this.#list.classList.add('dropdown-menu__left');
+      } else {
+        this.#list.classList.remove('dropdown-menu__left');
+        this.#list.classList.add('dropdown-menu__right');
+      }
     }
   };
+  // udon-patch end
 
   show() {
     il.UI.dropdown.opened?.hide();

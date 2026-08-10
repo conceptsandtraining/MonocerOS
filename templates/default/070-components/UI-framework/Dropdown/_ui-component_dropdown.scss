@@ -61,13 +61,6 @@ $dropdown-header-color: s.$il-neutral-light-color !default;
   border-radius: s.$il-border-radius-base;
   border: 0 none;
   box-shadow: s.$il-shadow--large;
-  // Aligns the dropdown menu to right
-  //
-  // Deprecated as of 3.1.0 in favor of `.dropdown-menu-[dir]`
-  &.pull-right {
-    right: 0;
-    left: auto;
-  }
 
   &.dropdown-menu__right {
     right: auto;
@@ -116,26 +109,6 @@ $dropdown-header-color: s.$il-neutral-light-color !default;
   }
 }
 
-// Menu positioning
-//
-// Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
-// menu with the parent.
-.dropdown-menu-right {
-  right: 0;
-  left: auto; // Reset the default from `.dropdown-menu`
-}
-
-// With v3, we enabled auto-flipping if you have a dropdown within a right
-// aligned nav component. To enable the undoing of that, we provide an override
-// to restore the default dropdown menu alignment.
-//
-// This is only for left-aligning a dropdown menu within a `.navbar-right` or
-// `.pull-right` nav component.
-.dropdown-menu-left {
-  right: auto;
-  left: 0;
-}
-
 // Backdrop to catch body clicks on mobile, etc.
 .dropdown-backdrop {
   position: fixed;
@@ -144,12 +117,6 @@ $dropdown-header-color: s.$il-neutral-light-color !default;
   bottom: 0;
   left: 0;
   z-index: ($zindex-dropdown - 10);
-}
-
-// Right aligned dropdowns
-.pull-right > .dropdown-menu {
-  right: 0;
-  left: auto;
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
@@ -242,13 +209,4 @@ $dropdown-header-color: s.$il-neutral-light-color !default;
 
 .dropdown h4 {
   margin: l.$il-margin-small-vertical 0;
-}
-
-//Note, this is a rather nasty fix for #27751
-//Should be removed in upcoming version
-.il-maincontrols-slate-content {
-  .dropdown-menu {
-    right: 0;
-    left: inherit;
-  }
 }
